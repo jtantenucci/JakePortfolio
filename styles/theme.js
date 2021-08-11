@@ -16,7 +16,7 @@ const theme = createTheme ({
       contrastText: '#212121',
     },
     background: {
-      paper: '#131313',
+      paper: '#fff',
       default: '#fff',
     },
     action: {
@@ -41,6 +41,12 @@ const theme = createTheme ({
       underlineHover: {
         color: '#fff',
         textDecoration: 'none',
+      },
+    },
+    MuiBackdrop: {
+      root: {
+        backgroundColor: '#fff',
+        boxShadow: 0,
       },
     },
   },

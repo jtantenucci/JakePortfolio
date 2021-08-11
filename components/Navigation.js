@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   bg: {
-    backgroundColor: "white",
+    backgroundColor: "rgba(255, 255, 255, 0)",
   },
   bar: {
     justifyContent: "space-between",
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {
     paddingTop: 12,
-    opacity: 0.6,
+    opacity: 0.7,
   },
   icons: {
     color: 'rgba(179, 179, 179, 1)',
@@ -53,7 +53,7 @@ export default function Navigation(props) {
       <AppBar className={classes.bg} elevation={24}>
         <Toolbar className={classes.bar}>
           <div className={classes.logo}>
-            <Image src="/logo.png" alt="namelogo" width={264} height={51} quality={100} />
+            <Image src="/logo.png" alt="namelogo" width={224.4} height={43.35} quality={100} />
           </div>
           <div>
             <SpringMenu />

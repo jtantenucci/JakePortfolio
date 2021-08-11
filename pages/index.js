@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
-import vaccine from "../public/vaccine-sketch.png";
-import washed from "../public/washed-sketch.png";
-import Image from "next/image";
 import Collages from "../components/Collages";
 import styles from "../styles/Home.module.css";
 
@@ -19,12 +16,6 @@ export default function Home() {
           <Collages styles={styles}/>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          socials
-        </a>
-      </footer>
     </div>
   );
 }
