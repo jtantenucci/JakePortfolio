@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import intact from "../public/intact-sketch.png";
 import highNoon from "../public/highnoon-sketch.png";
 import neuehaus from "../public/neuehaus-sketch.png";
@@ -5,18 +6,19 @@ import milkman from "../public/milkman-sketch.png";
 import laborOfLove from "../public/labor-of-sketch.png";
 import soak from "../public/soak-sketch.png";
 import sorry from "../public/sorry-sketch.png";
+import HorizontalRule from "../components/HorizontalRule";
 import Container from "@material-ui/core/Container";
-import { ImageListItemBar } from "@material-ui/core";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { makeStyles } from "@material-ui/core/styles";
-import IconButton from "material-ui/IconButton";
-import InfoIcon from "@material-ui/icons";
+import { useSpring, animated } from "react-spring";
 import springHours from "../public/springhours-sketch.png";
 import vaccine from "../public/vaccine-sketch.png";
 import washed from "../public/washed-sketch.png";
 import wetmail from "../public/wetmail-sketch.png";
 import april from "../public/april-sketch.png";
 import Image from "next/image";
+import Trail from "../components/Trail";
+import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 
 const useStyles = makeStyles(() => ({
   icon: {
@@ -29,19 +31,61 @@ const useStyles = makeStyles(() => ({
 
 export default function Collages({ styles }) {
   const classes = useStyles();
+  const [open, set] = useState(true);
+  const Fade = React.forwardRef(function Fade(props, ref) {
+    const { children } = props;
+    const style = useSpring({
+      config: { tension: 220, friction: 60, clamp: true },
+      enter: { color: "rgba(0,0,0,0)", opacity: 0.1 },
+      to: { color: "rgba(60,60,90,1)" },
+      from: { color: "rgba(0,0,0,0)"},
+    });
+    return (
+      <animated.div ref={ref} style={style}>
+        {children}
+      </animated.div>
+    );
+  });
+
   return (
     <>
       <Parallax pages={7} style={{ top: "0", left: "0" }}>
         <ParallaxLayer
+          offset={0}
+          speed={1}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "column",
+            alignItems: "center",
+            color: "black",
+          }}
+        >
+          <Fade>
+            <h1 className={styles.title}>this is placeholder text.</h1>
+            <h2 className={styles.subtitle}>
+              this text serves as an introduction to the artist and portfolio at
+              hand.
+            </h2>
+            <HorizontalRule />
+            <h3 className={styles.description}>
+              this is some descriptor text for the portfolio.
+            </h3>
+          </Fade>
+        </ParallaxLayer>
+        <ParallaxLayer
           offset={1}
-          speed={0}
+          speed={0.5}
           style={{
             display: "flex",
             justifyContent: "space-evenly",
             alignItems: "center",
-            color: "white",
+            color: "black",
           }}
         >
+          <h3 className={styles.description}>
+            this is some descriptor text for the portfolio.
+          </h3>
           <div className={styles.stackBottom}>
             <Image
               src={vaccine}
@@ -63,13 +107,25 @@ export default function Collages({ styles }) {
         </ParallaxLayer>
         <ParallaxLayer
           offset={2}
+          speed={2}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "column",
+            alignItems: "center",
+            color: "white",
+            backgroundImage: "url('/lavender-tab.png')",
+          }}
+        ></ParallaxLayer>
+        <ParallaxLayer
+          offset={2}
           speed={0.5}
           style={{
             display: "flex",
             justifyContent: "center",
+            flexDirection: "column",
             alignItems: "center",
             color: "white",
-            backgroundImage: "url('/lavender-tab.png')",
           }}
         >
           <div className={styles.stackBottom}>
@@ -82,6 +138,8 @@ export default function Collages({ styles }) {
               placeholder="blur"
             />
           </div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={2} speed={1} style={{ color: "white" }}>
           <div className={styles.stackTop}>
             <Image
               src={springHours}

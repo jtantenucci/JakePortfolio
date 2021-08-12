@@ -3,7 +3,7 @@ body {
   background-color: white;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: NeueHaasDisplayRoman, NeueHaasDisplayXThin, NeueHaasDisplayBlack, NeueHaasDisplayBlackItalic, NeueHaasDisplayRomanItalic, neueHaasDisplayXThinItalic, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -14,4 +14,47 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "NeueHaasDisplayBlack";
+  src: url("/fonts/NeueHaasDisplayBlack.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueHaasDisplayBlackItalic";
+  src: url("/fonts/NeueHaasDisplayBlackItalic.ttf");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueHaasDisplayRoman";
+  src: url("/fonts/NeueHaasDisplayRoman.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueHaasDisplayRomanItalic";
+  src: url("/fonts/NeueHaasDisplayRomanItalic.ttf");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueHaasDisplayXThin";
+  src: url("/fonts/NeueHaasDisplayXThin.ttf");
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueHaasDisplayXThinItalic";
+  src: url("/fonts/NeueHaasDisplayXThinItalic.ttf");
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
 }
