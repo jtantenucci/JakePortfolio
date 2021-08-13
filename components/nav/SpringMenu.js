@@ -9,7 +9,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import { useSpring, animated } from "react-spring";
-import Trail from "../components/Trail";
+import Trail from "../effects/Trail";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {

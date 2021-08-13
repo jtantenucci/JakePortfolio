@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import Collages from "../components/Collages";
+import MainParallax from "../components/MainParallax";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -49,7 +49,7 @@ export default function Home() {
       </Head>
       <main>
         <div className={styles.main}>
-          <Collages styles={styles} />
+          <MainParallax styles={styles} />
         </div>
       </main>
     </div>

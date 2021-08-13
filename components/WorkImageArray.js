@@ -1,4 +1,5 @@
-export const WorkImageArray = [
+export const WorkImageArray = 
+[
     {
         img: "/BUDGOD.png",
         title: 'BUDGOD',
