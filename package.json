@@ -9,8 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.8.1",
+    "@emotion/styled": "^11.8.1",
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
+    "@mui/material": "^5.4.2",
     "@react-spring/parallax": "^9.2.4",
     "material-ui": "^0.20.2",
     "mdi-material-ui": "^6.22.1",

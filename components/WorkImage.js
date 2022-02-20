@@ -1,16 +1,22 @@
 import React from 'react';
 import ImageListItem from '@material-ui/core/ImageListItem';
+import ImageListItemBar from '@material-ui/core/ImageListItemBar';
 import Image from 'next/image';
 
-export default function WorkImage({title, key, path, cols}) {
+export default function WorkImage({ title, author, path }) {
   return (
-    <ImageListItem key={key} cols={1}>
-      <Image 
-        src={path} 
+    <ImageListItem cols={1} sx={{ height: 443, width: 635 }}>
+      <Image
+        src={path}
         alt={title}
-        height="864"
-        width="1142" 
+        height="443"
+        width="635"
       />
-    </ImageListItem>
+      <ImageListItemBar
+        title={title}
+        subtitle={<span>by: {author}</span>}
+        position="below"
+      />
+    </ImageListItem >
   );
 }

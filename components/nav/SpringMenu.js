@@ -121,16 +121,13 @@ export default function SpringMenu() {
           <div className={classes.linksContainer}>
             <Trail open={open}>
               <Link href="/" className={classes.links}>
-                home
-              </Link>
-              <Link href="/work" className={classes.links}>
                 work
               </Link>
-              <Link href="#" onClick={preventDefault} className={classes.links}>
-                about
+              <Link href="/info" className={classes.links}>
+                info
               </Link>
-              <Link href="#" onClick={preventDefault} className={classes.links}>
-                contact
+              <Link href="/lab" className={classes.links}>
+                lab
               </Link>
             </Trail>
           </div>
