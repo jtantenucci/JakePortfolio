@@ -13,37 +13,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="preload"
-          href="/fonts/NeueHaasDisplayRoman.ttf"
+          href="/fonts/AlteHaasGroteskRegular.ttf"
           as="font"
           crossOrigin=""
         />
         <link
           rel="preload"
-          href="/fonts/NeueHaasDisplayRomanItalic.ttf"
-          as="font"
-          crossOrigin=""
-        />
-        <link
-          rel="preload"
-          href="/fonts/NeueHaasDisplayXThin.ttf"
-          as="font"
-          crossOrigin=""
-        />
-        <link
-          rel="preload"
-          href="/fonts/NeueHaasDisplayXThinItalic.ttf"
-          as="font"
-          crossOrigin=""
-        />
-        <link
-          rel="preload"
-          href="/fonts/NeueHaasDisplayBlack.ttf"
-          as="font"
-          crossOrigin=""
-        />
-        <link
-          rel="preload"
-          href="/fonts/NeueHaasDisplayBlackItalic.ttf"
+          href="/fonts/AlteHaasGroteskBold.ttf"
           as="font"
           crossOrigin=""
         />

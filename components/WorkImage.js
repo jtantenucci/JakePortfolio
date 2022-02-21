@@ -16,7 +16,9 @@ export default function WorkImage({ title, author, path }) {
         title={title}
         subtitle={<span>by: {author}</span>}
         position="below"
-      />
+      >
+        wtf
+      </ImageListItemBar>
     </ImageListItem >
   );
 }

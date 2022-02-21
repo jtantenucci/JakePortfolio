@@ -33,10 +33,16 @@ const theme = createTheme ({
       activatedOpacity: 0.24,
     }, 
     text: {
-      primary: '#fff',
+      primary: '#000000',
+      secondary: '#929292'
     },
-  }, 
-  overrides: {
+  },
+    overrides: {
+    MuiImageListItemBar: {
+      subtitle: {
+        color: '#929292'
+      }  
+    },
     MuiLink: {
       underlineHover: {
         color: '#fff',

@@ -77,14 +77,14 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
-  font-family: 'NeueHaasDisplayBlackItalic';
+  font-family: 'AlteHaasGroteskRegular';
 }
 
 .subtitle {
   margin: 0;
   line-height: 1.15;
   font-size: 2rem;
-  font-family: 'NeueHaasDisplayRoman';
+  font-family: 'AlteHaasGroteskRegular';
 }
 
 .title,
@@ -97,11 +97,11 @@
   line-height: 1.5;
   margin-top: 0;
   font-size: 1.5rem;
-  font-family: 'NeueHaasDisplayXThin';
+  font-family: 'AlteHaasGroteskRegular';
 }
 
 .head {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'AlteHaasGroteskRegular';
   color: rgba(0, 0, 0, 0.72);
   padding: 0;
   font-weight: 200;
@@ -117,8 +117,7 @@
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-family: 'AlteHaasGroteskRegular';
 }
 
 .grid {

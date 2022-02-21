@@ -1,37 +1,21 @@
 import React, { useState } from "react";
 import ImageList from '@mui/material/ImageList';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { MainArray } from '../components/MainArray';
-import WorkImage from '../components/WorkImage';
 import Image from 'next/image';
-import ImageListItem from '@material-ui/core/ImageListItem';
-import ImageListItemBar from '@material-ui/core/ImageListItemBar';
-import { useSpring, animated } from "react-spring";
+import ImageListItem from '@mui/material/ImageListItem';
+import ImageListItemBar from '@mui/material/ImageListItemBar';
 
 export default function Collages({ styles }) {
   const [open, set] = useState(true);
-  const Fade = React.forwardRef(function Fade(props, ref) {
-    const { children } = props;
-    const style = useSpring({
-      config: { tension: 220, friction: 60, clamp: true },
-      enter: { color: "rgba(0,0,0,0)", opacity: 0.1 },
-      to: {
-        color:
-          "linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, " +
-          "rgba(0,0,0,0.3) 70%, rgba(0,0,0,0.4) 100%)",
-      },
-      from: { color: "rgba(0,0,0,0)" },
-    });
-    return (
-      <animated.div ref={ref} style={style}>
-        {children}
-      </animated.div>
-    );
-  });
+  const theme = useTheme();
+  const columns = useMediaQuery(theme.breakpoints.up('md'));
 
   return (
-    <ImageList sx={{ width: "90vw" }} cols={2} gap={50}>
+    <ImageList sx={{ width: "90vw" }} cols={ columns ? 2 : 1 } gap={25}>
       {MainArray.map((item) => (
-        <ImageListItem cols={1}>
+        <ImageListItem cols={1} key={item.img}>
           <Image
             className={styles.nextImage}
             src={item.img}
@@ -43,8 +27,22 @@ export default function Collages({ styles }) {
             layout="responsive"
           />
           <ImageListItemBar
+            sx={{
+              color: '#000',
+              '& .MuiImageListItemBar-subtitle': {
+                color: '#929292',
+                [theme.breakpoints.down('lg')]: {
+                  fontSize: 18,
+                },
+              },
+              '& .MuiImageListItemBar-title': {
+                [theme.breakpoints.down('lg')]: {
+                  fontSize: 24,
+                },
+              }
+            }}
             title={item.title}
-            subtitle={<span>by: {item.author}</span>}
+            subtitle={<span> {item.author}</span>}
             position="below"
           />
         </ImageListItem >

@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
   links: {
     fontSize: 72,
-    fontFamily: "NeueHaasDisplayRoman",
+    fontFamily: "AlteHaasGroteskRegular",
     color: "rgba(179, 179, 179, 1)",
     padding: 5,
   },
