@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Toolbar from "@mui/material/Toolbar";
-import MainParallax from "../components/MainParallax";
+import MainSite from "../components/MainSite";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
       <main>
         <Toolbar />
           <div className={styles.main}>
-            <MainParallax styles={styles} />
+            <MainSite styles={styles} />
           </div>
       </main>
     </div>
