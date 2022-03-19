@@ -3,10 +3,12 @@ body {
   background-color: white;
   padding: 0;
   margin: 0;
-  font-family: AlteHaasGroteskRegular, AlteHaasGroteskBold, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
+h1 {
+  font-family: "TWKLausanne-400";
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -20,10 +22,20 @@ a {
   padding: 5px;
 }
 
+.css-1jfrq06-MuiPaper-root-MuiAppBar-root {
+  padding-right: 0px;
+  overflow-x: "hidden";
+}
+.css-1xvxpd9-MuiTypography-root-MuiLink-root {
+  font-family: "TWKLausanne-400";
+  letter-spacing: 1.5px;
+  font-size: 250px;
+}
+
 .css-dasnyc-MuiImageListItemBar-title {
   font-size: 32px;
   line-height: 40px;
-  font-family: "AlteHaasGroteskRegular";
+  font-family: "TWKLausanne-300";
 }
 
 .css-hk6gwf-MuiImageListItemBar-subtitle {
@@ -31,7 +43,35 @@ a {
   margin-top: 0px;
   line-height: 40px;
   color: '#929292';
-  font-family: "AlteHaasGroteskRegular";
+  font-family: "TWKLausanne-300";
+}
+
+@font-face {
+  font-family: "TWKLausanne-400";
+  src: url("/fonts/TWKLausanne-400.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TWKLausanne-300";
+  src: url("/fonts/TWKLausanne-300.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TWKLausanne-400Italic";
+  src: url("/fonts/TWKLausanne-400Italic.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TWKLausanne-700";
+  src: url("/fonts/TWKLausanne-700.ttf");
+  font-display: swap;
 }
 
 @font-face {

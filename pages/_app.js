@@ -1,14 +1,16 @@
 import "../styles/globals.css";
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { ThemeProvider } from '@material-ui/core';
+import { ThemeProvider } from '@mui/material/styles';
+import useMediaQuery from "@mui/material/useMediaQuery";
 import Navigation from "../components/nav/Navigation";
+import MainMenu from '../components/MainMenu';
 import theme from "../styles/theme";
 
 function MyApp({ Component, pageProps }) {
+  const columns = useMediaQuery(theme.breakpoints.up("md"));
+
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Navigation />
+          { columns ? null : <Navigation />}
       <Component {...pageProps} />
     </ThemeProvider>
   );

@@ -1,11 +1,11 @@
-import { createTheme } from '@material-ui/core';
+import { responsiveFontSizes } from '@material-ui/core';
+import { createTheme } from '@mui/material/styles';
 
-
-const theme = createTheme ({
+let theme = createTheme ({
   palette: {
     primary: {
       light: '#717681',
-      main: 'rgba(44, 45, 47, 0.9)',
+      main: '#000',
       dark: 'rgba(1, 1, 1, 0.6)',
       contrastText: '#fff',
     },
@@ -20,7 +20,7 @@ const theme = createTheme ({
       default: '#fff',
     },
     action: {
-      active: 'rgba(179, 179, 179, 1)',
+      hover: 'rgba(255, 255, 255, 1)',
       hover: 'rgba(255, 255, 255, 0.1)',
       hoverOpacity: 0.08,
       selected: 'rgba(199, 225, 235, 0.16)',
@@ -37,25 +37,43 @@ const theme = createTheme ({
       secondary: '#929292'
     },
   },
-    overrides: {
-    MuiImageListItemBar: {
-      subtitle: {
-        color: '#929292'
-      }  
+    typography: {
+      fontFamily: [
+        'TWKLausanne-300',
+        'TWKLausanne-400',
+        'Roboto',
+        '"Helvetica Neue"',
+        'Arial',
+        'sans-serif',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+      ].join(','),
+      h1: {
+        fontFamily: 'TWKLausanne-400',
+        fontSize: '8rem'
+      }
     },
-    MuiLink: {
-      underlineHover: {
-        color: '#fff',
-        textDecoration: 'none',
+    components: {
+      MuiLink: {
+        defaultProps: {
+          underline: 'none',
+        }
       },
-    },
-    MuiBackdrop: {
-      root: {
-        backgroundColor: '#fff',
-        boxShadow: 0,
+      MuiToolbar: {
+        defaultProps: {
+          backgroundColor: 'white',
+        }
       },
-    },
-  },
+      MuiAppBar: {
+        defaultProps: {
+          padding: 0,
+          overflow: 0,
+        }
+      },
+      MuiIconButton: {
+        color: "#000"
+      }
+    }
 });
 
-export default theme;
+export default responsiveFontSizes(theme);
