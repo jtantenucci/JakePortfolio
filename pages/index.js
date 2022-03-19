@@ -26,7 +26,7 @@ export default function Home() {
       </Head>
       <main>
         <Toolbar />
-          <div className={styles.main}>
+          <div>
             <MainSite styles={styles} />
           </div>
       </main>

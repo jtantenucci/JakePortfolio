@@ -2,7 +2,7 @@ export const MainArray =
 [
     {
         id: 1,
-        img: "/work/mint/MINT_Tile1.png",
+        img: "/work/mint/Mint.png",
         title: 'Made In 502',
         path: 'MadeIn502',
         author: 'Identity Design',
