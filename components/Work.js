@@ -4,12 +4,12 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import MainHoverImage from "./MainHoverImage";
-import MainMenu from "./MainMenu";
-import { MainArray } from '../components/MainArray';
+import MainHoverImage from "./image/MainHoverImage";
+import MainMenu from "./menu/MainMenu";
+import { MainArray } from './MainArray';
 
 
-export default function Collages({ styles }) {
+export default function Work({ styles }) {
   const theme = useTheme();
   const columns = useMediaQuery(theme.breakpoints.up("md"));
 

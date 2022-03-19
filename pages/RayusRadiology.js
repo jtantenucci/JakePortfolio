@@ -15,7 +15,7 @@ export default function RayusRadiology() {
     return (
         <>
             { columns ? null : <Navigation /> }
-            <Box container sx={{ paddingRight: "100px", paddingLeft: "100px" }}>
+            <Box container sx={{ marginLeft: "auto", marginRight: "auto", maxWidth: "90vw" }}>
                 <Toolbar />
                 { columns ? <MiniMenu/> : null }
                 <PageHeader title="Rayus Radiology"/>

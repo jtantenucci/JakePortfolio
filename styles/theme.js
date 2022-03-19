@@ -50,7 +50,12 @@ let theme = createTheme ({
       ].join(','),
       h1: {
         fontFamily: 'TWKLausanne-400',
-        fontSize: '8rem',
+        fontSize: '12rem',
+        letterSpacing: "-5px"
+      },
+      h2: {
+        fontFamily: 'TWKLausanne-400',
+        fontSize: '10rem',
         letterSpacing: "-5px"
       }
     },

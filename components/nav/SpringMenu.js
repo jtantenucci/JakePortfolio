@@ -4,7 +4,7 @@ import { useTheme } from "@mui/material/styles";
 import Dialog from "@mui/material/Dialog";
 import MenuIcon from "@material-ui/icons/Menu";
 import Box from "@mui/material/Box";
-import AnimatedMenuItem from '../AnimatedMenuItem';
+import AnimatedMenuItem from '../menu/AnimatedMenuItem';
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";

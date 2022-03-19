@@ -1,14 +1,16 @@
 import React from "react";
 import { useTheme } from "@mui/material/styles";
 import AnimatedMenuItem from "./AnimatedMenuItem";
-import Box from '@mui/material/Box'
+import Box from '@mui/material/Box';
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function FooterMenu({ styles }) {
     const theme = useTheme();
+    const columns = useMediaQuery(theme.breakpoints.up("md"));
 
     return (
         <>
-            <Box sx={{ display: "flex", flexDirection: "row", paddingBottom: "25px", justifyContent: "flex-start" }}>
+            <Box sx={{ display: "flex", flexDirection: columns ? "row" : "column", paddingBottom: "25px", justifyContent: "flex-start" }}>
                 <AnimatedMenuItem
                     href="https://www.instagram.com/la.brains/"
                     text="instagram"
@@ -23,7 +25,6 @@ export default function FooterMenu({ styles }) {
                     variant="h4"
                     sx={{
                         paddingRight: "10px",
-                        paddingLeft: '10px'
                     }}
                 />
                 <AnimatedMenuItem
@@ -32,7 +33,6 @@ export default function FooterMenu({ styles }) {
                     variant="h4"
                     sx={{
                         paddingRight: "10px",
-                        paddingLeft: '10px'
                     }}
                 />
             </Box>

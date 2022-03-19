@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Toolbar from "@mui/material/Toolbar";
-import MainSite from "../components/MainSite";
+import Work from "../components/Work";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
       <main>
         <Toolbar />
           <div>
-            <MainSite styles={styles} />
+            <Work styles={styles} />
           </div>
       </main>
     </div>

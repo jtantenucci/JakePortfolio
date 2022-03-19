@@ -57,24 +57,6 @@ export default function MainHoverImage({ ...props }) {
             layout="responsive"
           />
         </Link>
-        <ImageListItemBar
-          sx={{
-            color: "#000",
-            "& .MuiImageListItemBar-subtitle": {
-              color: "#929292",
-              [theme.breakpoints.down("lg")]: {
-                fontSize: 18,
-              },
-            },
-            "& .MuiImageListItemBar-title": {
-              [theme.breakpoints.down("lg")]: {
-                fontSize: 24,
-              },
-            },
-          }}
-          title={props.title}
-          position="below"
-        />
       </AnimatedImageListItem>
     </>
   );

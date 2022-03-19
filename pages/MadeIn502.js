@@ -4,7 +4,7 @@ import { useTheme } from "@mui/material/styles";
 import React from 'react';
 import useMediaQuery from "@mui/material/useMediaQuery";
 import PageHeader from '../components/PageHeader';
-import MiniMenu from '../components/MiniMenu';
+import MiniMenu from '../components/menu/MiniMenu';
 import Navigation from '../components/nav/Navigation';
 
 
@@ -15,7 +15,7 @@ export default function MadeIn502() {
     return (
         <>
             { columns ? null : <Navigation /> }
-            <Box container sx={{ paddingRight: "100px", paddingLeft: "100px" }}>
+            <Box container sx={{ marginLeft: "auto", marginRight: "auto", maxWidth: "90vw" }}>
                 <Toolbar />
                 { columns ? <MiniMenu/> : null }
                 <PageHeader title="Made In 502"/>

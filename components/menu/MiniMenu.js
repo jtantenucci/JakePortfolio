@@ -31,7 +31,6 @@ export default function MiniMenu({ styles }) {
         text="lab" 
         variant="h3"
         sx={{ 
-            paddingRight: "10px", 
             paddingLeft: '10px' 
         }} 
       />

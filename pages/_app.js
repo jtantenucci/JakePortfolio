@@ -2,8 +2,7 @@ import "../styles/globals.css";
 import { ThemeProvider } from '@mui/material/styles';
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Navigation from "../components/nav/Navigation";
-import MainMenu from '../components/MainMenu';
-import Footer from '../components/Footer';
+import PageFooter from '../components/PageFooter';
 import theme from "../styles/theme";
 
 function MyApp({ Component, pageProps }) {
@@ -13,7 +12,7 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider theme={theme}>
           { columns ? null : <Navigation />}
       <Component {...pageProps} />
-      <Footer />
+      <PageFooter />
     </ThemeProvider>
   );
 }
