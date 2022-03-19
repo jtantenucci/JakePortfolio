@@ -4,7 +4,7 @@ import { useTheme } from "@mui/material/styles";
 import Dialog from "@mui/material/Dialog";
 import MenuIcon from "@material-ui/icons/Menu";
 import Box from "@mui/material/Box";
-import Link from "@mui/material/Link";
+import AnimatedMenuItem from '../AnimatedMenuItem';
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
@@ -104,15 +104,9 @@ export default function SpringMenu() {
             }}
           >
             <Trail open={open}>
-              <Link variant="h1" href="/">
-                work
-              </Link>
-              <Link variant="h1" href="/info">
-                info
-              </Link>
-              <Link variant="h1" href="/lab">
-                lab
-              </Link>
+              <AnimatedMenuItem variant="h1" href="/" text="work" />
+              <AnimatedMenuItem variant="h1" href="/Info" text="info" />
+              <AnimatedMenuItem variant="h1" href="/Lab" text="lab" />
             </Trail>
           </Box>
         </Fade>

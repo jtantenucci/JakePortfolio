@@ -11,7 +11,8 @@ const Head = styled.div`
     flex-direction: "row";
     justify-content: "space-evenly";
 `
-export default function MainMenu(title) {
+
+export default function MainMenu({title}) {
   const theme = useTheme();
 
   return (      

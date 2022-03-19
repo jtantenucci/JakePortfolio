@@ -22,19 +22,16 @@ export default function MainHoverImage({ ...props }) {
         friction: 14,
         clamp: true
     },
-    opacity: 1,
-    filter: 1
   }));
   const AnimatedImageListItem = animated(ImageListItem);
   const theme = useTheme();
 
   const MouseEnter = () => {
-    set({ opacity: 0.75, contrast: 0 })
     setHover(true);
   }
 
   const MouseLeave = () => {
-    set({ xys: [0, 0, 1], opacity: 1, contrast: 1});
+    set({ xys: [0, 0, 1] });
     setHover(false)
   }
 
@@ -47,11 +44,9 @@ export default function MainHoverImage({ ...props }) {
         onMouseLeave={MouseLeave}
         style={{
           transform: properties.xys.to(trans),
-          opacity: properties.opacity,
-          filter: `contrast(${properties.filter})`
         }}
       >
-        <Link href={props.title}>
+        <Link href={props.path}>
           <Image
             src={props.img}
             alt={props.title}

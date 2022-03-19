@@ -9,7 +9,7 @@ export default function Navigation() {
   return (
     <>
       <AppBar elevation={0}>
-        <Toolbar sx={{ display: "flex", justifyContent: "center", backgroundColor: "white" }} disableGutters="true">
+        <Toolbar sx={{ display: "flex", justifyContent: "center", backgroundColor: "white" }}>
             <SpringMenu />
         </Toolbar>
       </AppBar>
