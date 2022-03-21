@@ -1,7 +1,7 @@
 import React from 'react';
 import ImageList from '@mui/material/ImageList';
 import { WorkImageArray } from '../components/workimagearray';
-import WorkImage from '../components/WorkImage';
+import WorkImage from '../components/image/WorkImage';
 import { Toolbar } from '@mui/material';
 import { useTheme } from "@mui/material/styles";
 import { Box } from '@mui/material'
