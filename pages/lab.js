@@ -1,6 +1,6 @@
 import React from 'react';
 import ImageList from '@mui/material/ImageList';
-import { WorkImageArray } from 'components/workimagearray';
+import { WorkImageArray } from 'components/WorkImageArray';
 import WorkImage from 'components/image/WorkImage';
 import { Toolbar } from '@mui/material';
 import { useTheme } from "@mui/material/styles";
