@@ -31,7 +31,7 @@ export default function ImageBlock({path, title, maxWidth, height, marginRight, 
       <Image
         src={path}
         alt={title}
-        quality={100}
+        quality={80}
         objectFit="contain"
       />
     </Box>

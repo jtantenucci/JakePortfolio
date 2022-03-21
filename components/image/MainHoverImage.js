@@ -52,7 +52,7 @@ export default function MainHoverImage({ ...props }) {
             height="443"
             width="635"
             sizes="50vw"
-            quality="100"
+            quality="80"
             layout="responsive"
           />
         </Link>
