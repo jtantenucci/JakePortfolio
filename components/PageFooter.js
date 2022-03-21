@@ -13,7 +13,7 @@ export default function PageFooter({ changedColor, changedColor2, changedColor3 
         <>
             <Box container sx={{ marginLeft: "auto", marginRight: "auto", maxWidth: "90vw", display: "flex", flexDirection: "row", paddingTop: columns ? "100px" : "25px", paddingBottom: columns ? "50px" : "10px",justifyContent: "space-between" }}>
                 <FooterMenu changedColor={changedColor} changedColor2={changedColor2 ? changedColor2 : changedColor} changedColor3={changedColor3 ? changedColor3 : changedColor} />
-                <Typography sx={{ justifySelf: "end" }} variant="h4">
+                <Typography sx={{ justifySelf: "end" }} variant={columns ? "h4" : "h5"}>
                     jake lamothe 2022©
                 </Typography>
             </Box>

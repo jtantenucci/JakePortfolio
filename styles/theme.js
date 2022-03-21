@@ -59,6 +59,9 @@ let theme = createTheme ({
         fontSize: '9rem',
         letterSpacing: "-5px"
       },
+      h5: {
+        fontSize: '1.75rem'
+      }
     },
     components: {
       MuiLink: {

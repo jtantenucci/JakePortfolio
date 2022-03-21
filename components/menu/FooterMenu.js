@@ -14,7 +14,7 @@ export default function FooterMenu({ changedColor, changedColor2, changedColor3 
                 <AnimatedMenuItem
                     href="https://www.instagram.com/la.brains/"
                     text="instagram"
-                    variant="h4"
+                    variant={columns ? "h4" : "h5"}
                     changedColor={changedColor}
                     sx={{
                         paddingRight: "10px",
@@ -23,7 +23,7 @@ export default function FooterMenu({ changedColor, changedColor2, changedColor3 
                 <AnimatedMenuItem
                     href="https://www.linkedin.com/in/jakelamothe/"
                     text="linkedin"
-                    variant="h4"
+                    variant={columns ? "h4" : "h5"}
                     changedColor={changedColor2 ? changedColor2 : changedColor}
                     sx={{
                         paddingRight: "10px",
@@ -32,7 +32,7 @@ export default function FooterMenu({ changedColor, changedColor2, changedColor3 
                 <AnimatedMenuItem
                     href="mailto:jake.lamothe@gmail.com"
                     text="email"
-                    variant="h4"
+                    variant={columns ? "h4" : "h5"}
                     changedColor={changedColor3 ? changedColor3 : changedColor}
                     sx={{
                         paddingRight: "10px",
