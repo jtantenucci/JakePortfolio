@@ -55,9 +55,9 @@ let theme = createTheme ({
       },
       h2: {
         fontFamily: 'TWKLausanne-400',
-        fontSize: '10rem',
+        fontSize: '9rem',
         letterSpacing: "-5px"
-      }
+      },
     },
     components: {
       MuiLink: {

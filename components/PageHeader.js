@@ -12,12 +12,15 @@ const Head = styled.div`
     justify-content: "space-evenly";
 `
 
-export default function MainMenu({title}) {
+export default function PageHeader({title, variant}) {
   const theme = useTheme();
+  PageHeader.defaultProps = {
+    variant: "h1"
+  }
 
   return (      
     <Head>
-        <Typography variant='h1'>
+        <Typography variant={variant}>
             {title}
         </Typography>
     </Head>

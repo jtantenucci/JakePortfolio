@@ -15,10 +15,15 @@ export default function Info() {
   return (
     <>
         { columns ? null : <Navigation /> }
-        <Box container sx={{ paddingRight: "100px", paddingLeft: "100px" }}>
+        <Box container sx={{ maxWidth: "90vw", marginLeft: "auto", marginRight: "auto" }}>
             <Toolbar />
             { columns ? <MiniMenu/> : null }
-            <PageHeader title="info"/>
+            <PageHeader 
+              variant="h2"
+              title="A designer with experience in digital, motion and identity design. 
+                    I find ways to work concept-driven visuals into valuable brand experiences and long-lasting connections. 
+                    I'm always open to new opportunities, so please feel free to say hi! Currently working as an Art Director @ LUDWIG+."  
+            />
         </Box>
     </>
   );

@@ -13,13 +13,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="preload"
-          href="/fonts/AlteHaasGroteskRegular.ttf"
+          href="/public/fonts/TWKLausanne-300.ttf"
           as="font"
           crossOrigin=""
         />
         <link
           rel="preload"
-          href="/fonts/AlteHaasGroteskBold.ttf"
+          href="/public/fonts/TWKLausanne-400.ttf"
           as="font"
           crossOrigin=""
         />

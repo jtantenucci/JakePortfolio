@@ -7,7 +7,7 @@ import { useTheme } from "@mui/material/styles";
 import { Box } from '@mui/material'
 import PageHeader from '../components/PageHeader';
 import useMediaQuery from "@mui/material/useMediaQuery";
-import MiniMenu from '../components/MiniMenu';
+import MiniMenu from '../components/menu/MiniMenu';
 import Navigation from '../components/nav/Navigation';
 
 export default function Lab() {
