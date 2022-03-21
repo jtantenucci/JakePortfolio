@@ -19,7 +19,6 @@ export default function Info() {
             <Toolbar />
             { columns ? <MiniMenu/> : null }
             <PageHeader 
-              variant="h2"
               title="A designer with experience in digital, motion and identity design. 
                     I find ways to work concept-driven visuals into valuable brand experiences and long-lasting connections. 
                     I'm always open to new opportunities, so please feel free to say hi! Currently working as an Art Director @ LUDWIG+."  
