@@ -5,7 +5,6 @@ import Dialog from "@mui/material/Dialog";
 import MenuIcon from "@material-ui/icons/Menu";
 import Box from "@mui/material/Box";
 import AnimatedMenuItem from '../menu/AnimatedMenuItem';
-import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
@@ -65,16 +64,10 @@ export default function SpringMenu({ changedColor, changedColor2, changedColor3 
       <Dialog
         fullScreen
         open={open}
+        disableScrollLock={true}
         onClose={handleClose}
         TransitionComponent={Fade}
       >
-        <AppBar
-          elevation={0}
-          sx={{
-            padding: 0,
-            overflow: "hidden",
-          }}
-        >
           <Toolbar
             sx={{
               display: "flex",
@@ -91,7 +84,6 @@ export default function SpringMenu({ changedColor, changedColor2, changedColor3 
               <CloseIcon />
             </IconButton>
           </Toolbar>
-        </AppBar>
         <Fade in={open}>
           <Box
             sx={{
@@ -100,13 +92,13 @@ export default function SpringMenu({ changedColor, changedColor2, changedColor3 
               alignItems: "center",
               flexDirection: "column",
               justifyContent: "space-evenly",
-              height: 1080,
+              height: "100vh",
             }}
           >
             <Trail open={open}>
-              <AnimatedMenuItem changedColor={changedColor} variant="h1" href="/" text="work" />
-              <AnimatedMenuItem changedColor={changedColor2 ? changedColor2 : changedColor} variant="h1" href="/info" text="info" />
-              <AnimatedMenuItem changedColor={changedColor3 ? changedColor3 : changedColor} variant="h1" href="/lab" text="lab" />
+              <AnimatedMenuItem changedColor={changedColor} variant="h2" href="/" text="work" />
+              <AnimatedMenuItem changedColor={changedColor2 ? changedColor2 : changedColor} variant="h2" href="/info" text="info" />
+              <AnimatedMenuItem changedColor={changedColor3 ? changedColor3 : changedColor} variant="h2" href="/lab" text="lab" />
             </Trail>
           </Box>
         </Fade>

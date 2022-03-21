@@ -4,7 +4,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-export default function PageText({ text, marginLeft, marginRight, maxWidth, paddingTop, paddingBottom }) {
+export default function PageText({ text, marginLeft, marginRight, maxWidth, paddingTop, paddingBottom, fontFamily }) {
   const theme = useTheme();
   const columns = useMediaQuery(theme.breakpoints.up("md"));
   PageText.defaultProps = {
@@ -12,7 +12,8 @@ export default function PageText({ text, marginLeft, marginRight, maxWidth, padd
     marginRight: "auto",
     maxWidth: "50vw",
     paddingTop: "50px",
-    paddingBottom: "50px"
+    paddingBottom: "50px",
+    fontFamily: "TWKLausanne-300"
   }
 
   return (      
@@ -26,7 +27,7 @@ export default function PageText({ text, marginLeft, marginRight, maxWidth, padd
       }}
     >
         <Typography 
-            sx={{ lineHeight: "50px"}}
+            sx={{ lineHeight: columns ? "50px" : "30px", fontFamily: {fontFamily} }}
             variant={columns ? 'h4' : 'h6' }
         >
             {text}

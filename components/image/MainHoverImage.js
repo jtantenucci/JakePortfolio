@@ -53,6 +53,8 @@ export default function MainHoverImage({ ...props }) {
             width="635"
             sizes="50vw"
             quality="80"
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="
             layout="responsive"
           />
         </Link>

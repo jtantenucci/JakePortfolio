@@ -41,6 +41,7 @@ let theme = createTheme ({
       fontFamily: [
         'TWKLausanne-300',
         'TWKLausanne-400',
+        'TWKLausanne-700',
         'Roboto',
         '"Helvetica Neue"',
         'Arial',

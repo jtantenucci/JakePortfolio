@@ -11,21 +11,21 @@ import ImageBlock from "components/image/ImageBlock";
 import MiniMenu from "components/menu/MiniMenu";
 import Navigation from "components/nav/Navigation";
 import ValkyrieNasdaq from "public/ValkyrieNasdaq.gif";
-import ValkTypeExploration from "public/ValkTypeExploration.png";
-import ValkyrieArtboard from "public/ValkyrieArtboard.png";
-import ValkyrieArtboard2 from "public/ValkArtboard2.png";
-import ValkyrieExploration from "public/ValkyrieExploration.png";
-import ValkyrieLogo from "public/ValkyrieLogo.png";
-import ValkyrieLogo2 from "public/ValkyrieLogo2.png";
-import ValkyrieMock from "public/ValkyrieMock.png";
-import ValkyriePalette from "public/ValkyriePalette.png";
-import ValkyriePalette2 from "public/ValkyriePalette2.png";
-import ValkyrieWire from "public/ValkyrieWire.png";
+import ValkTypeExploration from "public/ValkTypeExploration.jpg";
+import ValkyrieArtboard from "public/ValkyrieArtboard.jpg";
+import ValkyrieArtboard2 from "public/ValkArtboard2.jpg";
+import ValkyrieExploration from "public/ValkyrieExploration.jpg";
+import ValkyrieLogo from "public/ValkyrieLogo.jpg";
+import ValkyrieLogo2 from "public/ValkyrieLogo2.jpg";
+import ValkyrieMock from "public/ValkyrieMock.jpg";
+import ValkyriePalette from "public/ValkyriePalette.jpg";
+import ValkyriePalette2 from "public/ValkyriePalette2.jpg";
+import ValkyrieWire from "public/ValkyrieWire.jpg";
 
 export default function Valkyrie() {
   const theme = useTheme();
   const columns = useMediaQuery(theme.breakpoints.up("md"));
-
+  const valkBlur = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mMUMZ31HwADLAHkJ286/gAAAABJRU5ErkJggg==";
   return (
     <>
       {columns ? null : <Navigation />}
@@ -36,7 +36,7 @@ export default function Valkyrie() {
         <Toolbar />
         {columns ? <MiniMenu changedColor={'#14359a'} changedColor2={'#ed5439'} changedColor3={'#ccff00'} /> : null}
         <PageHeader title="Valkyrie" />
-        <ImageBlock path={ValkyrieMock} title="Valkyrie Mock" />
+        <ImageBlock path={ValkyrieMock} placeholder="blur" blurDataURL={valkBlur} title="Valkyrie Mock" />
         <PageText
           text="Valkyrie Investments is a alternative asset management firm based in Tennessee, 
                 focusing on the emerging cryptocurrency sector. I was assigned to refresh Valkyrie's identity, 
@@ -58,11 +58,15 @@ export default function Valkyrie() {
           marginLeft={0}
           maxWidth="80vw"
           path={ValkyrieLogo}
+          placeholder="blur"
+          blurDataURL={valkBlur}
           title="Valkyrie Logo"
         />
         <ImageBlock
           maxWidth="70vw"
           path={ValkyriePalette}
+          placeholder="blur"
+          blurDataURL={valkBlur}
           title="Valkyrie Palette"
         />
         <Box
@@ -73,9 +77,9 @@ export default function Valkyrie() {
             justifyContent: "space-between",
           }}
         >
-          <PageText marginRight={columns ? 0 : "auto"} paddingBottom={columns ? "50px" : "0px"} text="Color Palette" />
+          <PageText fontFamily='TWKLausanne-700' marginRight={columns ? 0 : "auto"} paddingBottom={columns ? "50px" : "0px"} text="Color Palette" />
           <PageText
-            paddingTop={columns ? "50px" : "0px"}
+            paddingTop={columns ? "50px" : "5px"}
             text="As digital centric brand, it was important to be mindful of contrast and color. 
                   Valkyrie's final selected palette provides a high contrast and the ability to catch eyes 
                   even with a quick scroll."
@@ -84,15 +88,17 @@ export default function Valkyrie() {
         <ImageBlock
           maxWidth="70vw"
           path={ValkyriePalette2}
+          placeholder="blur"
+          blurDataURL={valkBlur}
           title="Valkyrie Palette2"
         />
       </Box>
-      <ImageBlock marginLeft={0} maxWidth="70vw" path={ValkTypeExploration} title="Valkyrie Type Exploration" />
-      <ImageBlock maxWidth="100vw" path={ValkyrieExploration} title="Valkyrie Exploration" />
-      <ImageBlock maxWidth="80vw" path={ValkyrieLogo2} title="Valkyrie Logo 2" />      
-      <ImageBlock maxWidth="95vw" path={ValkyrieWire} title="Valkyrie Wireframe" />      
-      <ImageBlock marginRight={0} maxWidth="70vw" path={ValkyrieArtboard} title="Valkyrie Artboard" />
-      <ImageBlock maxWidth="90vw" path={ValkyrieArtboard2} title="Valkyrie Artboard 2" />
+      <ImageBlock marginLeft={0} maxWidth="70vw" path={ValkTypeExploration} placeholder="blur" blurDataURL={valkBlur} title="Valkyrie Type Exploration" />
+      <ImageBlock maxWidth="100vw" path={ValkyrieExploration} placeholder="blur" blurDataURL={valkBlur} title="Valkyrie Exploration" />
+      <ImageBlock maxWidth="80vw" path={ValkyrieLogo2} placeholder="blur" blurDataURL={valkBlur} title="Valkyrie Logo 2" />      
+      <ImageBlock maxWidth="95vw" path={ValkyrieWire} placeholder="blur" blurDataURL={valkBlur} title="Valkyrie Wireframe" />      
+      <ImageBlock marginRight={0} maxWidth="70vw" path={ValkyrieArtboard} placeholder="blur" blurDataURL={valkBlur} title="Valkyrie Artboard" />
+      <ImageBlock maxWidth="90vw" path={ValkyrieArtboard2} placeholder="blur" blurDataURL={valkBlur} title="Valkyrie Artboard 2" />
       <ImageBlock marginLeft={0} maxWidth="60vw" path={ValkyrieNasdaq} title="Valkyrie Artboard 2" />
       <PageFooter changedColor={'#14359a'} changedColor2={'#ed5439'} changedColor3={'#ccff00'} />
     </>

@@ -10,16 +10,16 @@ import PageSubtext from "components/PageSubtext";
 import ImageBlock from "components/image/ImageBlock";
 import MiniMenu from "components/menu/MiniMenu";
 import Navigation from "components/nav/Navigation";
-import RayusSign from "public/RayusSign.png";
-import RayusPoster from "public/RayusPoster.png";
-import RayusPoster2 from "public/RayusPoster2.png";
-import RayusInstagram from "public/RayusInstagram.png";
-import RayusSocialTile from "public/RayusSocialTile.png";
+import RayusSign from "public/RayusSign.jpg";
+import RayusPoster from "public/RayusPoster.jpg";
+import RayusPoster2 from "public/RayusPoster2.jpg";
+import RayusInstagram from "public/RayusInstagram.jpg";
 import RayusSocialTileGif from "public/RayusSocialTile.gif";
 
 export default function RayusRadiology() {
   const theme = useTheme();
   const columns = useMediaQuery(theme.breakpoints.up("md"));
+  const rayusBlur = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8FCH9HwAGDwJmXMSEXAAAAABJRU5ErkJggg==";
 
   return (
     <>
@@ -31,7 +31,7 @@ export default function RayusRadiology() {
         <Toolbar />
         {columns ? <MiniMenu changedColor={'#0484bd'} changedColor2={'#f2581b'} /> : null}
         <PageHeader title="Rayus Radiology" />
-        <ImageBlock path={RayusSign} title="Rayus Sign" />
+        <ImageBlock path={RayusSign} placeholder="blur" blurDataURL={rayusBlur} title="Rayus Sign" />
         <PageText
           text="RAYUS Radiology is a national provider of radiology and diagnostic medicine. 
                 Formerly known as CDI, Center for Diagnostic Imaging, we created a new name, logo, 
@@ -57,10 +57,12 @@ export default function RayusRadiology() {
             justifyContent: "space-between",
           }}
         >
-          <ImageBlock maxWidth="40vw" path={RayusPoster} title="Rayus Poster" />
+          <ImageBlock maxWidth="40vw" path={RayusPoster} placeholder="blur" blurDataURL={rayusBlur} title="Rayus Poster" />
           <ImageBlock
             maxWidth="40vw"
             path={RayusPoster2}
+            placeholder="blur"
+            blurDataURL={rayusBlur}
             title="Rayus Poster 2"
           />
         </Box>
@@ -69,7 +71,7 @@ export default function RayusRadiology() {
           path={RayusSocialTileGif}
           title="Rayus Social Tile Gif"
         />
-        <ImageBlock path={RayusInstagram} title="Rayus Social Tile Gif" />
+        <ImageBlock path={RayusInstagram} placeholder="blur" blurDataURL={rayusBlur} title="Rayus Social Tile Gif" />
       </Box>
       <PageFooter changedColor={'#0484bd'} changedColor2={'#f2581b'} />
     </>

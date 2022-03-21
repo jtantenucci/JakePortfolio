@@ -3,9 +3,11 @@ import ImageList from "@mui/material/ImageList";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import MainHoverImage from "components/image/MainHoverImage";
 import MainMenu from "components/menu/MainMenu";
+import Navigation from "components/nav/Navigation";
 import PageFooter from 'components/PageFooter';
 import { MainArray } from 'components/MainArray';
 
@@ -16,7 +18,8 @@ export default function Work({ styles }) {
 
   return (
     <>
-      { columns ? <MainMenu /> : null }
+      { columns ? <Toolbar /> : <null /> }
+      { columns ? <MainMenu /> : <Navigation /> }
       <Box container sx={{ marginLeft: "auto", marginRight: "auto", width: "90vw", display: "flex", flexDirection: "column", justifyContent: "flex-start"}}>
         <Typography variant="h4" sx={{ justifySelf: "start" }}>
           selected work

@@ -10,16 +10,17 @@ import PageFooter from "components/PageFooter";
 import ImageBlock from "components/image/ImageBlock";
 import MiniMenu from "components/menu/MiniMenu";
 import Navigation from "components/nav/Navigation";
-import SpinIndex from "public/SpinIndex.png";
-import SpinStory from "public/SpinStory.png";
-import SpinCampaign from "public/SpinCampaign.png";
-import SpinInstagram from "public/SpinInstagram.png";
-import SpinIntersection from "public/SpinIntersection.png";
+import SpinIndex from "public/SpinIndex.jpg";
+import SpinStory from "public/SpinStory.jpg";
+import SpinCampaign from "public/SpinCampaign.jpg";
+import SpinInstagram from "public/SpinInstagram.jpg";
+import SpinIntersection from "public/SpinIntersection.jpg";
 import SpinLogo from "public/SpinLogo.gif";
 
 export default function SpinItForward() {
   const theme = useTheme();
   const columns = useMediaQuery(theme.breakpoints.up("md"));
+  const spinBlur = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8y8DwHwAEvQHu+0/9rgAAAABJRU5ErkJggg==";
 
   return (
     <>
@@ -31,7 +32,7 @@ export default function SpinItForward() {
         <Toolbar />
         {columns ? <MiniMenu changedColor={'#ed0000'} /> : null}
         <PageHeader title="Spin It Forward" />
-        <ImageBlock path={SpinIndex} title="Spin Index" />
+        <ImageBlock path={SpinIndex} placeholder="blur" blurDataURL={spinBlur} title="Spin Index" />
         <PageText
           text="SPIN, an e-scooter company backed by Ford Motor, came to us to help create a campaign around their Giving Tuesday initiative. 
               For each trip taken on a SPIN e-scooter that week, they donated a new pair of socks to a community shelter."
@@ -54,20 +55,26 @@ export default function SpinItForward() {
           maxWidth="50vw"
           text="Art Direction → Jake LaMothe"
         />
-        <ImageBlock path={SpinStory} title="Spin Stories" />
+        <ImageBlock path={SpinStory} placeholder="blur" blurDataURL={spinBlur} title="Spin Stories" />
         <ImageBlock
           marginRight={0}
           maxWidth="70vw"
           path={SpinCampaign}
+          placeholder="blur"
+          blurDataURL={spinBlur}
           title="Spin Campaign"
         />
         <ImageBlock
           path={SpinInstagram}
+          placeholder="blur"
+          blurDataURL={spinBlur}
           title="Spin Instagram"
         />
         <ImageBlock
           maxWidth="100vw"
           path={SpinIntersection}
+          placeholder="blur"
+          blurDataURL={spinBlur}
           title="Spin Intersection"
         />
         <ImageBlock

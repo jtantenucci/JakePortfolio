@@ -8,11 +8,9 @@ export default function Navigation({ changedColor, changedColor2, changedColor3 
   const theme = useTheme();
   return (
     <>
-      <AppBar elevation={0}>
-        <Toolbar sx={{ display: "flex", justifyContent: "center", backgroundColor: "white" }}>
-            <SpringMenu changedColor={changedColor} changedColor2={changedColor2 ? changedColor2 : changedColor} changedColor3={changedColor3 ? changedColor3 : changedColor}  />
-        </Toolbar>
-      </AppBar>
+      <Toolbar sx={{ display: "flex", justifyContent: "center", backgroundColor: "white" }}>
+          <SpringMenu changedColor={changedColor} changedColor2={changedColor2 ? changedColor2 : changedColor} changedColor3={changedColor3 ? changedColor3 : changedColor}  />
+      </Toolbar>
     </>
   );
 }

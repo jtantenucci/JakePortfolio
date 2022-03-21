@@ -4,7 +4,6 @@ import { ThemeProvider } from '@mui/material/styles';
 import { CacheProvider } from '@emotion/react';
 import createEmotionCache from 'src/createEmotionCache';
 import useMediaQuery from "@mui/material/useMediaQuery";
-import Navigation from "components/nav/Navigation";
 import theme from "styles/theme";
 
 const clientSideEmotionCache = createEmotionCache();
@@ -17,7 +16,6 @@ function MyApp(props) {
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
-            { columns ? null : <Navigation />}
         <Component {...pageProps} />
       </ThemeProvider>
     </CacheProvider>
