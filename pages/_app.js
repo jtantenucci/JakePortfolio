@@ -12,7 +12,6 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider theme={theme}>
           { columns ? null : <Navigation />}
       <Component {...pageProps} />
-      <PageFooter />
     </ThemeProvider>
   );
 }

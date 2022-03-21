@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import MainHoverImage from "./image/MainHoverImage";
 import MainMenu from "./menu/MainMenu";
+import PageFooter from './PageFooter';
 import { MainArray } from './MainArray';
 
 
@@ -26,9 +27,10 @@ export default function Work({ styles }) {
       </Box>
       <ImageList className={styles.imageList} sx={{ marginLeft: "auto", marginRight: "auto", width: "90vw", overflow: "hidden", backgroundClip: "border-box" }} cols={columns ? 2 : 1} gap={25}>
         {MainArray.map((item) => (
-          <MainHoverImage img={item.img} title={item.title} path={item.path}/>
+          <MainHoverImage key={item.title} img={item.img} title={item.title} path={item.path}/>
         ))}
       </ImageList>
+      <PageFooter />
     </>
   );
 }

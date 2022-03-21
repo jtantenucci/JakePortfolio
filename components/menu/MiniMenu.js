@@ -3,7 +3,7 @@ import { useTheme } from "@mui/material/styles";
 import AnimatedMenuItem from "./AnimatedMenuItem";
 import Box from '@mui/material/Box'
 
-export default function MiniMenu({ styles }) {
+export default function MiniMenu({ changedColor, changedColor2, changedColor3 }) {
   const theme = useTheme();
 
   return (
@@ -12,6 +12,7 @@ export default function MiniMenu({ styles }) {
         href="/" 
         text="work" 
         variant="h3"
+        changedColor={changedColor}
         sx={{ 
             paddingRight: "10px", 
             paddingLeft: '10px' 
@@ -21,6 +22,7 @@ export default function MiniMenu({ styles }) {
         href="/Info" 
         text="info" 
         variant="h3"
+        changedColor={changedColor2 ? changedColor2 : changedColor}
         sx={{ 
             paddingRight: "10px", 
             paddingLeft: '10px' 
@@ -30,6 +32,7 @@ export default function MiniMenu({ styles }) {
         href="/Lab" 
         text="lab" 
         variant="h3"
+        changedColor={changedColor3 ? changedColor3 : changedColor}
         sx={{ 
             paddingLeft: '10px' 
         }} 

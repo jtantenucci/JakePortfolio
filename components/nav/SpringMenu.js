@@ -44,7 +44,7 @@ Fade.propTypes = {
   onExited: PropTypes.func,
 };
 
-export default function SpringMenu() {
+export default function SpringMenu({ changedColor, changedColor2, changedColor3 }) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const preventDefault = (event) => event.preventDefault();
@@ -104,9 +104,9 @@ export default function SpringMenu() {
             }}
           >
             <Trail open={open}>
-              <AnimatedMenuItem variant="h1" href="/" text="work" />
-              <AnimatedMenuItem variant="h1" href="/Info" text="info" />
-              <AnimatedMenuItem variant="h1" href="/Lab" text="lab" />
+              <AnimatedMenuItem changedColor={changedColor} variant="h1" href="/" text="work" />
+              <AnimatedMenuItem changedColor={changedColor2 ? changedColor2 : changedColor} variant="h1" href="/Info" text="info" />
+              <AnimatedMenuItem changedColor={changedColor3 ? changedColor3 : changedColor} variant="h1" href="/Lab" text="lab" />
             </Trail>
           </Box>
         </Fade>

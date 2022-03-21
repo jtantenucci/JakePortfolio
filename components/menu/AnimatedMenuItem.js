@@ -4,8 +4,11 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Link from "@mui/material/Link";
 
-export default function AnimatedMenuItem({href, text, variant, sx}) {
+export default function AnimatedMenuItem({ href, text, variant, sx, changedColor }) {
   const [hover, setHover] = useState(false);
+  AnimatedMenuItem.defaultProps = {
+    changedColor: '#4287f5'
+  }
   const [properties, set] = useSpring(() => ({
     config: config.molasses,
     opacity: 1,
@@ -14,7 +17,7 @@ export default function AnimatedMenuItem({href, text, variant, sx}) {
   }));
 
   const MouseEnter = () => {
-    set({ opacity: 0.2, textDecoration: "line-through", color: '#4287f5' });
+    set({ opacity: 0.4, textDecoration: "line-through", color: changedColor });
     setHover(true);
   }
 

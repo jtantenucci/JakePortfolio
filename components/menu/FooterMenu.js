@@ -4,7 +4,7 @@ import AnimatedMenuItem from "./AnimatedMenuItem";
 import Box from '@mui/material/Box';
 import useMediaQuery from "@mui/material/useMediaQuery";
 
-export default function FooterMenu({ styles }) {
+export default function FooterMenu({ changedColor, changedColor2, changedColor3 }) {
     const theme = useTheme();
     const columns = useMediaQuery(theme.breakpoints.up("md"));
 
@@ -15,6 +15,7 @@ export default function FooterMenu({ styles }) {
                     href="https://www.instagram.com/la.brains/"
                     text="instagram"
                     variant="h4"
+                    changedColor={changedColor}
                     sx={{
                         paddingRight: "10px",
                     }}
@@ -23,6 +24,7 @@ export default function FooterMenu({ styles }) {
                     href="https://www.linkedin.com/in/jakelamothe/"
                     text="linkedin"
                     variant="h4"
+                    changedColor={changedColor2 ? changedColor2 : changedColor}
                     sx={{
                         paddingRight: "10px",
                     }}
@@ -31,6 +33,7 @@ export default function FooterMenu({ styles }) {
                     href="mailto:jake.lamothe@gmail.com"
                     text="email"
                     variant="h4"
+                    changedColor={changedColor3 ? changedColor3 : changedColor}
                     sx={{
                         paddingRight: "10px",
                     }}
