@@ -19,7 +19,7 @@ export default function MiniMenu({ changedColor, changedColor2, changedColor3 })
         }} 
       />
       <AnimatedMenuItem 
-        href="/Info" 
+        href="/info" 
         text="info" 
         variant="h3"
         changedColor={changedColor2 ? changedColor2 : changedColor}
@@ -29,7 +29,7 @@ export default function MiniMenu({ changedColor, changedColor2, changedColor3 })
         }} 
       />
       <AnimatedMenuItem 
-        href="/Lab" 
+        href="/lab" 
         text="lab" 
         variant="h3"
         changedColor={changedColor3 ? changedColor3 : changedColor}

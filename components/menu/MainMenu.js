@@ -21,7 +21,7 @@ export default function MainMenu({ changedColor }) {
         }}
       />
       <AnimatedMenuItem 
-        href="/Info" 
+        href="/info" 
         text="info" 
         variant={columns? "h1" : "h2" }
         changedColor={changedColor}
@@ -31,7 +31,7 @@ export default function MainMenu({ changedColor }) {
         }} 
       />
       <AnimatedMenuItem 
-        href="/Lab" 
+        href="/lab" 
         text="lab" 
         variant={columns? "h1" : "h2" }
         changedColor={changedColor}

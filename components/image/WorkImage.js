@@ -5,20 +5,16 @@ import Image from 'next/image';
 
 export default function WorkImage({ title, author, path }) {
   return (
-    <ImageListItem cols={1} sx={{ height: 443, width: 635 }}>
+    <ImageListItem cols={1}>
       <Image
         src={path}
         alt={title}
         height="443"
         width="635"
+        sizes="50vw"
+        quality="100"
+        layout="responsive"
       />
-      <ImageListItemBar
-        title={title}
-        subtitle={<span>by: {author}</span>}
-        position="below"
-      >
-        wtf
-      </ImageListItemBar>
     </ImageListItem >
   );
 }

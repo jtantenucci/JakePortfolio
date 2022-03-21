@@ -17,12 +17,12 @@ export default function Lab() {
   return (
     <>
       { columns ? null : <Navigation /> }
-      <Box container sx={{ paddingRight: "100px", paddingLeft: "100px" }}>
+      <Box container sx={{ marginLeft: "auto", marginRight: "auto", width: "90vw", display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
         <Toolbar />
         { columns ? <MiniMenu/> : null }
-        <PageHeader title="lab"/>
+        <PageHeader title="Lab"/>
       </Box>
-      <ImageList rowHeight={800} sx={{ width: 1920, height: 1080 }} cols={2}>
+      <ImageList sx={{ marginLeft: "auto", marginRight: "auto", width: "100vw", overflow: "hidden", backgroundClip: "border-box" }}  cols={columns ? 3 : 1} gap={25}>
         {WorkImageArray.map((item) => (
           <WorkImage 
             title={item.title} 
