@@ -1,18 +1,33 @@
 import "styles/globals.css";
+import PropTypes from 'prop-types';
 import { ThemeProvider } from '@mui/material/styles';
+import { CacheProvider } from '@emotion/react';
+import createEmotionCache from 'src/createEmotionCache';
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Navigation from "components/nav/Navigation";
 import theme from "styles/theme";
 
-function MyApp({ Component, pageProps }) {
+const clientSideEmotionCache = createEmotionCache();
+
+function MyApp(props) {
   const columns = useMediaQuery(theme.breakpoints.up("md"));
+  const { Component, emotionCache = 
+    clientSideEmotionCache, pageProps } = props;
 
   return (
-    <ThemeProvider theme={theme}>
-          { columns ? null : <Navigation />}
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <CacheProvider value={emotionCache}>
+      <ThemeProvider theme={theme}>
+            { columns ? null : <Navigation />}
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </CacheProvider>
   );
 }
+
+MyApp.propTypes = {
+  Component: PropTypes.elementType.isRequired,
+  emotionCache: PropTypes.object,
+  pageProps: PropTypes.object.isRequired,
+};
 
 export default MyApp;

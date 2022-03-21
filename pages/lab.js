@@ -2,9 +2,9 @@ import React from 'react';
 import ImageList from '@mui/material/ImageList';
 import { WorkImageArray } from 'components/WorkImageArray';
 import WorkImage from 'components/image/WorkImage';
-import { Toolbar } from '@mui/material';
+import Toolbar from "@mui/material/Toolbar";
+import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
-import { Box } from '@mui/material'
 import PageHeader from 'components/PageHeader';
 import useMediaQuery from "@mui/material/useMediaQuery";
 import MiniMenu from 'components/menu/MiniMenu';

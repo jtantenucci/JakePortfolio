@@ -1,5 +1,5 @@
-import { Toolbar } from "@mui/material";
-import { Box } from "@mui/material";
+import Toolbar from "@mui/material/Toolbar";
+import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import React from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
