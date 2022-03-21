@@ -4,7 +4,6 @@ import { useTheme } from "@mui/material/styles";
 import Image from "next/image";
 import ImageListItem from "@mui/material/ImageListItem";
 import Link from "@mui/material/Link";
-import ImageListItemBar from "@mui/material/ImageListItemBar";
 
 export default function MainHoverImage({ ...props }) {
   const [hover, setHover] = useState(false);

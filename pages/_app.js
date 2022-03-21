@@ -1,8 +1,8 @@
-import "../styles/globals.css";
+import "styles/globals.css";
 import { ThemeProvider } from '@mui/material/styles';
 import useMediaQuery from "@mui/material/useMediaQuery";
-import Navigation from "../components/nav/Navigation";
-import theme from "../styles/theme";
+import Navigation from "components/nav/Navigation";
+import theme from "styles/theme";
 
 function MyApp({ Component, pageProps }) {
   const columns = useMediaQuery(theme.breakpoints.up("md"));

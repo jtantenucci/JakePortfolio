@@ -2,10 +2,10 @@ import React from 'react';
 import { Toolbar } from '@mui/material';
 import { Box } from '@mui/material'
 import { useTheme } from "@mui/material/styles";
-import PageHeader from '../components/PageHeader';
+import PageHeader from 'components/PageHeader';
 import useMediaQuery from "@mui/material/useMediaQuery";
-import MiniMenu from '../components/menu/MiniMenu';
-import Navigation from '../components/nav/Navigation';
+import MiniMenu from 'components/menu/MiniMenu';
+import Navigation from 'components/nav/Navigation';
 
 
 export default function Info() {

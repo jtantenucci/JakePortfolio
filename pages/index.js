@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Toolbar from "@mui/material/Toolbar";
-import Work from "../components/Work";
-import styles from "../styles/Home.module.css";
+import Work from "components/Work";
+import styles from "styles/Home.module.css";
 
 export default function Home() {
   return (

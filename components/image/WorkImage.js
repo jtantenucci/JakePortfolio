@@ -1,6 +1,6 @@
 import React from 'react';
-import ImageListItem from '@material-ui/core/ImageListItem';
-import ImageListItemBar from '@material-ui/core/ImageListItemBar';
+import ImageListItem from '@mui/material/ImageListItem';
+import ImageListItemBar from '@mui/material/ImageListItemBar';
 import Image from 'next/image';
 
 export default function WorkImage({ title, author, path }) {

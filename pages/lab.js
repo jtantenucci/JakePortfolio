@@ -1,14 +1,14 @@
 import React from 'react';
 import ImageList from '@mui/material/ImageList';
-import { WorkImageArray } from '../components/workimagearray';
-import WorkImage from '../components/image/WorkImage';
+import { WorkImageArray } from 'components/workimagearray';
+import WorkImage from 'components/image/WorkImage';
 import { Toolbar } from '@mui/material';
 import { useTheme } from "@mui/material/styles";
 import { Box } from '@mui/material'
-import PageHeader from '../components/PageHeader';
+import PageHeader from 'components/PageHeader';
 import useMediaQuery from "@mui/material/useMediaQuery";
-import MiniMenu from '../components/menu/MiniMenu';
-import Navigation from '../components/nav/Navigation';
+import MiniMenu from 'components/menu/MiniMenu';
+import Navigation from 'components/nav/Navigation';
 
 export default function Lab() {
   const theme = useTheme();

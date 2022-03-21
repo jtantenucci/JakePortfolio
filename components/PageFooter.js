@@ -1,6 +1,6 @@
 import React from "react";
 import { useTheme } from "@mui/material/styles";
-import FooterMenu from "./menu/FooterMenu";
+import FooterMenu from "components/menu/FooterMenu";
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box'
 

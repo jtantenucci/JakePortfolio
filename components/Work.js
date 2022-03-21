@@ -4,10 +4,10 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import MainHoverImage from "./image/MainHoverImage";
-import MainMenu from "./menu/MainMenu";
-import PageFooter from './PageFooter';
-import { MainArray } from './MainArray';
+import MainHoverImage from "components/image/MainHoverImage";
+import MainMenu from "components/menu/MainMenu";
+import PageFooter from 'components/PageFooter';
+import { MainArray } from 'components/MainArray';
 
 
 export default function Work({ styles }) {
