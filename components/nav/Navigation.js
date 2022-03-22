@@ -1,5 +1,4 @@
 import React from "react";
-import AppBar from "@mui/material/AppBar";
 import { useTheme } from "@mui/material/styles";
 import SpringMenu from './SpringMenu';
 import Toolbar from "@mui/material/Toolbar";

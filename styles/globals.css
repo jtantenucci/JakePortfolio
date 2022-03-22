@@ -26,6 +26,16 @@ a {
   padding-right: 0px;
   overflow-x: "hidden";
 }
+.css-yiavyu-MuiBackdrop-root-MuiDialog-backdrop {
+  background-color: white;
+}
+.css-1huni3v-MuiPaper-root-MuiDialog-paper {
+  overflow-x: "hidden";
+}
+
+.css-hz1bth-MuiDialog-container {
+  overflow-x: "hidden";
+}
 
 .css-dasnyc-MuiImageListItemBar-title {
   font-size: 32px;

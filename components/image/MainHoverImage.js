@@ -3,7 +3,7 @@ import { useSpring, animated, config } from "react-spring";
 import { useTheme } from "@mui/material/styles";
 import Image from "next/image";
 import ImageListItem from "@mui/material/ImageListItem";
-import Link from "@mui/material/Link";
+import Link from "next/link";
 
 export default function MainHoverImage({ ...props }) {
   const [hover, setHover] = useState(false);
@@ -45,7 +45,7 @@ export default function MainHoverImage({ ...props }) {
           transform: properties.xys.to(trans),
         }}
       >
-        <Link href={props.path}>
+        <Link passHref href={props.path}>
           <Image
             src={props.img}
             alt={props.title}

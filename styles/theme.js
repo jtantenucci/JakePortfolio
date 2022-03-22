@@ -67,7 +67,7 @@ let theme = createTheme ({
       MuiLink: {
         defaultProps: {
           underline: 'none',
-        }
+        },
       },
       MuiToolbar: {
         defaultProps: {
@@ -82,7 +82,7 @@ let theme = createTheme ({
       },
       MuiIconButton: {
         color: "#000"
-      }
+      },
     }
 });
 

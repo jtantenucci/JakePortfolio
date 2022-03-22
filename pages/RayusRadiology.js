@@ -15,23 +15,35 @@ import RayusPoster from "public/RayusPoster.jpg";
 import RayusPoster2 from "public/RayusPoster2.jpg";
 import RayusInstagram from "public/RayusInstagram.jpg";
 import RayusSocialTileGif from "public/RayusSocialTile.gif";
+import HeadComponent from "components/HeadComponent";
 
 export default function RayusRadiology() {
   const theme = useTheme();
   const columns = useMediaQuery(theme.breakpoints.up("md"));
-  const rayusBlur = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8FCH9HwAGDwJmXMSEXAAAAABJRU5ErkJggg==";
+  const rayusBlur =
+    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8FCH9HwAGDwJmXMSEXAAAAABJRU5ErkJggg==";
 
   return (
     <>
-      {columns ? null : <Navigation changedColor={'#0484bd'} changedColor2={'#f2581b'} />}
+      <HeadComponent title="rayus - Jake Lamothe" />
+      {columns ? null : (
+        <Navigation changedColor={"#0484bd"} changedColor2={"#f2581b"} />
+      )}
       <Box
         container
         sx={{ marginLeft: "auto", marginRight: "auto", maxWidth: "90vw" }}
       >
         <Toolbar />
-        {columns ? <MiniMenu changedColor={'#0484bd'} changedColor2={'#f2581b'} /> : null}
-        <PageHeader title="Rayus Radiology" />
-        <ImageBlock path={RayusSign} placeholder="blur" blurDataURL={rayusBlur} title="Rayus Sign" />
+        {columns ? (
+          <MiniMenu changedColor={"#0484bd"} changedColor2={"#f2581b"} />
+        ) : null}
+        <PageHeader title="rayus" />
+        <ImageBlock
+          path={RayusSign}
+          placeholder="blur"
+          blurDataURL={rayusBlur}
+          title="Rayus Sign"
+        />
         <PageText
           text="RAYUS Radiology is a national provider of radiology and diagnostic medicine. 
                 Formerly known as CDI, Center for Diagnostic Imaging, we created a new name, logo, 
@@ -57,7 +69,13 @@ export default function RayusRadiology() {
             justifyContent: "space-between",
           }}
         >
-          <ImageBlock maxWidth="40vw" path={RayusPoster} placeholder="blur" blurDataURL={rayusBlur} title="Rayus Poster" />
+          <ImageBlock
+            maxWidth="40vw"
+            path={RayusPoster}
+            placeholder="blur"
+            blurDataURL={rayusBlur}
+            title="Rayus Poster"
+          />
           <ImageBlock
             maxWidth="40vw"
             path={RayusPoster2}
@@ -71,9 +89,14 @@ export default function RayusRadiology() {
           path={RayusSocialTileGif}
           title="Rayus Social Tile Gif"
         />
-        <ImageBlock path={RayusInstagram} placeholder="blur" blurDataURL={rayusBlur} title="Rayus Social Tile Gif" />
+        <ImageBlock
+          path={RayusInstagram}
+          placeholder="blur"
+          blurDataURL={rayusBlur}
+          title="Rayus Social Tile Gif"
+        />
       </Box>
-      <PageFooter changedColor={'#0484bd'} changedColor2={'#f2581b'} />
+      <PageFooter changedColor={"#0484bd"} changedColor2={"#f2581b"} />
     </>
   );
 }

@@ -16,23 +16,31 @@ import SpinCampaign from "public/SpinCampaign.jpg";
 import SpinInstagram from "public/SpinInstagram.jpg";
 import SpinIntersection from "public/SpinIntersection.jpg";
 import SpinLogo from "public/SpinLogo.gif";
+import HeadComponent from "components/HeadComponent";
 
 export default function SpinItForward() {
   const theme = useTheme();
   const columns = useMediaQuery(theme.breakpoints.up("md"));
-  const spinBlur = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8y8DwHwAEvQHu+0/9rgAAAABJRU5ErkJggg==";
+  const spinBlur =
+    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8y8DwHwAEvQHu+0/9rgAAAABJRU5ErkJggg==";
 
   return (
     <>
-      {columns ? null : <Navigation changedColor={'#ed0000'} />}
+      <HeadComponent title="spin - Jake Lamothe" />
+      {columns ? null : <Navigation changedColor={"#ed0000"} />}
       <Box
         container
         sx={{ marginLeft: "auto", marginRight: "auto", maxWidth: "90vw" }}
       >
         <Toolbar />
-        {columns ? <MiniMenu changedColor={'#ed0000'} /> : null}
-        <PageHeader title="Spin It Forward" />
-        <ImageBlock path={SpinIndex} placeholder="blur" blurDataURL={spinBlur} title="Spin Index" />
+        {columns ? <MiniMenu changedColor={"#ed0000"} /> : null}
+        <PageHeader title="spin" />
+        <ImageBlock
+          path={SpinIndex}
+          placeholder="blur"
+          blurDataURL={spinBlur}
+          title="Spin Index"
+        />
         <PageText
           text="SPIN, an e-scooter company backed by Ford Motor, came to us to help create a campaign around their Giving Tuesday initiative. 
               For each trip taken on a SPIN e-scooter that week, they donated a new pair of socks to a community shelter."
@@ -55,7 +63,12 @@ export default function SpinItForward() {
           maxWidth="50vw"
           text="Art Direction → Jake LaMothe"
         />
-        <ImageBlock path={SpinStory} placeholder="blur" blurDataURL={spinBlur} title="Spin Stories" />
+        <ImageBlock
+          path={SpinStory}
+          placeholder="blur"
+          blurDataURL={spinBlur}
+          title="Spin Stories"
+        />
         <ImageBlock
           marginRight={0}
           maxWidth="70vw"
@@ -77,12 +90,8 @@ export default function SpinItForward() {
           blurDataURL={spinBlur}
           title="Spin Intersection"
         />
-        <ImageBlock
-          maxWidth="50vw"
-          path={SpinLogo}
-          title="Spin Logo Gif"
-        />
-        <PageFooter changedColor={'#ed0000'} />
+        <ImageBlock maxWidth="50vw" path={SpinLogo} title="Spin Logo Gif" />
+        <PageFooter changedColor={"#ed0000"} />
       </Box>
     </>
   );

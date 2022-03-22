@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useTheme } from "@mui/material/styles";
 import Dialog from "@mui/material/Dialog";
-import MenuIcon from "@material-ui/icons/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
 import Box from "@mui/material/Box";
-import AnimatedMenuItem from '../menu/AnimatedMenuItem';
+import AnimatedMenuItem from "../menu/AnimatedMenuItem";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import CloseIcon from "@material-ui/icons/Close";
+import CloseIcon from "@mui/icons-material/Close";
 import { useSpring, animated } from "react-spring";
 import Trail from "../effects/Trail";
 
@@ -58,15 +58,16 @@ export default function SpringMenu({ changedColor, changedColor2, changedColor3 
 
   return (
     <div>
-      <IconButton onClick={handleOpen} aria-label="menu">
-        <MenuIcon />
+      <IconButton sx={{ marginLeft: "5px"}} onClick={handleOpen} aria-label="menu">
+        <MenuIcon sx={{color: "black"}}/>
       </IconButton>
       <Dialog
         fullScreen
+        PaperProps={{ sx: {overflowX: "hidden", overflowY: "hidden"}, elevation: 0 }}
         open={open}
-        disableScrollLock={true}
         onClose={handleClose}
         TransitionComponent={Fade}
+        scroll="body"
       >
           <Toolbar
             sx={{
@@ -91,8 +92,9 @@ export default function SpringMenu({ changedColor, changedColor2, changedColor3 
               display: "flex",
               alignItems: "center",
               flexDirection: "column",
-              justifyContent: "space-evenly",
+              justifyContent: "center",
               height: "100vh",
+              paddingBottom: "50px"
             }}
           >
             <Trail open={open}>
