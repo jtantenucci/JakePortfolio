@@ -3,7 +3,6 @@ import ImageList from "@mui/material/ImageList";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import MainHoverImage from "components/image/MainHoverImage";
 import MainMenu from "components/menu/MainMenu";
@@ -32,7 +31,7 @@ export default function Work({ styles }) {
           <MainHoverImage key={item.title} img={item.img} title={item.title} path={item.path}/>
         ))}
       </ImageList>
-      <PageFooter />
+      <PageFooter color="#000"/>
     </>
   );
 }

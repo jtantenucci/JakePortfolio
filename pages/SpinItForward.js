@@ -25,7 +25,7 @@ export default function SpinItForward() {
   return (
     <>
       <HeadComponent title="spin - Jake Lamothe" />
-      {columns ? <MiniMenu changedColor={"#ed0000"} /> : <Navigation changedColor={"#ed0000"} />}
+      {columns ? <MiniMenu  color="#000" changedColor={"#ed0000"} /> : <Navigation changedColor={"#ed0000"} />}
       <Box
         container
         sx={{ marginLeft: "auto", marginRight: "auto", maxWidth: "90vw" }}
@@ -80,7 +80,7 @@ export default function SpinItForward() {
           title="Spin Instagram"
         />
         <ImageBlock maxWidth="50vw" path={SpinLogo} title="Spin Logo Gif" />
-        <PageFooter changedColor={"#ed0000"} />
+        <PageFooter color="#000" changedColor={"#ed0000"} />
       </Box>
     </>
   );

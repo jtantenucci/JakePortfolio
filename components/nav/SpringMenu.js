@@ -115,18 +115,21 @@ export default function SpringMenu({
           >
             <Trail open={open}>
               <AnimatedMenuItem
+                color="#000"
                 changedColor={changedColor}
                 variant="h2"
                 href="/"
                 text="work"
               />
               <AnimatedMenuItem
+                color="#000"
                 changedColor={changedColor2 ? changedColor2 : changedColor}
                 variant="h2"
                 href="/info"
                 text="info"
               />
               <AnimatedMenuItem
+                color="#000"
                 changedColor={changedColor3 ? changedColor3 : changedColor}
                 variant="h2"
                 href="/lab"

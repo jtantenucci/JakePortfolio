@@ -3,9 +3,9 @@ import { useTheme } from "@mui/material/styles";
 import AnimatedMenuItem from "./AnimatedMenuItem";
 import PageAnchorBox from "components/PageAnchorBox";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
 
 export default function MiniMenu({
+  color,
   changedColor,
   changedColor2,
   changedColor3,
@@ -26,6 +26,7 @@ export default function MiniMenu({
             href="/"
             text="work"
             variant="h3"
+            color={color}
             changedColor={changedColor}
             sx={{
               paddingRight: "10px",
@@ -36,6 +37,7 @@ export default function MiniMenu({
             href="/info"
             text="info"
             variant="h3"
+            color={color}
             changedColor={changedColor2 ? changedColor2 : changedColor}
             sx={{
               paddingRight: "10px",
@@ -46,6 +48,7 @@ export default function MiniMenu({
             href="/lab"
             text="lab"
             variant="h3"
+            color={color}
             changedColor={changedColor3 ? changedColor3 : changedColor}
             sx={{
               paddingLeft: "10px",

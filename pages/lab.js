@@ -1,7 +1,6 @@
 import React from "react";
 import ImageList from "@mui/material/ImageList";
-import { WorkImageArray } from "components/WorkImageArray";
-import WorkImage from "components/image/WorkImage";
+import { LabArray } from "components/LabArray";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import PageHeader from "components/PageHeader";
@@ -11,15 +10,16 @@ import MiniMenu from "components/menu/MiniMenu";
 import Navigation from "components/nav/Navigation";
 import MintTile from "public/MintTile.gif";
 import HeadComponent from "components/HeadComponent";
+import PageFooter from "components/PageFooter";
 
 export default function Lab() {
   const theme = useTheme();
   const columns = useMediaQuery(theme.breakpoints.up("md"));
 
   return (
-    <>
+    <Box sx={{backgroundColor: "#000"}}>
       <HeadComponent title="lab - Jake Lamothe" />
-      {columns ? <MiniMenu /> : <Navigation />}
+      {columns ? <MiniMenu color="#fff"/> : <Navigation />}
       <Box
         container
         sx={{
@@ -31,29 +31,31 @@ export default function Lab() {
           justifyContent: "flex-start",
         }}
       >
-        <PageHeader title="lab" />
-        <ImageBlock maxWidth="50vw" path={MintTile} title="MintTile" />
+        <PageHeader color="#fff" title="lab" />
       </Box>
       <ImageList
         sx={{
           marginLeft: "auto",
           marginRight: "auto",
-          width: "100vw",
+          width: "90vw",
           overflow: "hidden",
-          backgroundClip: "border-box",
+          backgroundClip: "border-box"
         }}
-        cols={columns ? 3 : 1}
-        gap={25}
+        variant='masonry'
+        cols={columns ? 4: 1}
+        gap={5}
       >
-        {WorkImageArray.map((item) => (
-          <WorkImage
+        {LabArray.map((item) => (
+          <ImageBlock
+            paddingTop="0px"
+            paddingBottom="0px"
             title={item.title}
             key={item.img}
             path={item.img}
-            size={item.cols}
           />
         ))}
       </ImageList>
-    </>
+      <PageFooter color="#fff"></PageFooter>
+    </Box>
   );
 }

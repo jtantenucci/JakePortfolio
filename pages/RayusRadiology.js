@@ -27,7 +27,7 @@ export default function RayusRadiology() {
     <>
       <HeadComponent title="rayus - Jake Lamothe" />
       {columns ? 
-        <MiniMenu changedColor={"#0484bd"} changedColor2={"#f2581b"} /> 
+        <MiniMenu color="#000" changedColor={"#0484bd"} changedColor2={"#f2581b"} /> 
         : (
         <Navigation changedColor={"#0484bd"} changedColor2={"#f2581b"} />
       )}
@@ -94,7 +94,7 @@ export default function RayusRadiology() {
           title="Rayus Social Tile Gif"
         />
       </Box>
-      <PageFooter changedColor={"#0484bd"} changedColor2={"#f2581b"} />
+      <PageFooter color="#000" changedColor={"#0484bd"} changedColor2={"#f2581b"} />
     </>
   );
 }

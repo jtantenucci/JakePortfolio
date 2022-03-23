@@ -12,11 +12,11 @@ const Head = styled.div`
     justify-content: "space-evenly";
 `
 
-export default function PageHeader({title}) {
+export default function PageHeader({title, color}) {
   const theme = useTheme();
   return (      
     <Head>
-        <Typography variant='h1'>
+        <Typography color={color ? color : "#000"} variant='h1'>
             {title}
         </Typography>
     </Head>

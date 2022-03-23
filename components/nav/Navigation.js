@@ -6,6 +6,7 @@ import { AppBar } from "@mui/material";
 import PageAnchorBox from "components/PageAnchorBox";
 
 export default function Navigation({
+  color,
   changedColor,
   changedColor2,
   changedColor3,
@@ -29,6 +30,7 @@ export default function Navigation({
         }}
       >
         <SpringMenu
+          color={color}
           changedColor={changedColor}
           changedColor2={changedColor2 ? changedColor2 : changedColor}
           changedColor3={changedColor3 ? changedColor3 : changedColor}

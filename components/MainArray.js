@@ -1,8 +1,13 @@
+import Mint502 from 'public/Mint.jpg';
+import Valkyrie from 'public/ValkyrieIndex.jpg'
+import Rayus from 'public/rayus.jpg'
+import Spin from 'public/Spin.jpg'
+
 export const MainArray = 
 [
     {
         id: 1,
-        img: "/Mint.jpg",
+        img: Mint502,
         title: 'Made In 502',
         path: 'MadeIn502',
         author: 'Identity Design',
@@ -10,7 +15,7 @@ export const MainArray =
     },
     {
         id: 2,
-        img: "/ValkyrieIndex.jpg",
+        img: Valkyrie,
         title: 'Valkyrie',
         path: 'Valkyrie',
         author: 'Identity Design',
@@ -18,7 +23,7 @@ export const MainArray =
     },
     {
         id: 3,
-        img: "/rayus.jpg",
+        img: Rayus,
         title: 'Rayus Radiology',
         path: 'RayusRadiology',
         author: 'Art Direction',
@@ -26,7 +31,7 @@ export const MainArray =
     },
     {
         id: 4,
-        img: "/Spin.jpg",
+        img: Spin,
         title: 'Spin It Forward',
         path: 'SpinItForward',
         author: 'Art Direction',

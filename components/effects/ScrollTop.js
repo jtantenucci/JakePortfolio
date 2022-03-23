@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { useTheme } from "@mui/material/styles";
 import useScrollTrigger from '@mui/material/useScrollTrigger';
-import useMediaQuery from "@mui/material/useMediaQuery";
 import Box from '@mui/material/Box';
 import Zoom from '@mui/material/Zoom';
 
@@ -12,8 +11,6 @@ export default function ScrollTop( props ) {
     disableHysteresis: true,
     threshold: 100,
   });
-  const columns = useMediaQuery(theme.breakpoints.up("md"));
-
   
   const handleClick = (event) => {
     const anchor = (event.target.ownerDocument || document).querySelector(

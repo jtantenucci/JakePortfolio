@@ -17,7 +17,7 @@ export default function Info() {
   return (
     <>
     <HeadComponent></HeadComponent>
-      {columns ? <MiniMenu /> : <Navigation />}
+      {columns ? <MiniMenu color="#000"/> : <Navigation />}
       <Box
         container
         sx={{
@@ -47,7 +47,7 @@ export default function Info() {
             href="http://www.ludwigplus.com"
           > @LUDWIG+.</Link>
         </Typography>
-        <PageFooter />
+        <PageFooter color="#000" />
       </Box>
     </>
   );

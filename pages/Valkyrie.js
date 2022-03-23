@@ -32,7 +32,7 @@ export default function Valkyrie() {
     <>
       <HeadComponent title="valkyrie - Jake Lamothe" />
       {columns ? (
-        <MiniMenu
+        <MiniMenu color="#000"
           changedColor={"#14359a"}
           changedColor2={"#ed5439"}
           changedColor3={"#ccff00"}
@@ -167,6 +167,7 @@ export default function Valkyrie() {
         title="Valkyrie Artboard 2"
       />
       <PageFooter
+        color="#000"
         changedColor={"#14359a"}
         changedColor2={"#ed5439"}
         changedColor3={"#ccff00"}

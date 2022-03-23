@@ -7,6 +7,7 @@ import {Link as MuiLink} from '@mui/material';
 import Typography from "@mui/material/Typography";
 
 export default function AnimatedMenuItem({
+  color,
   href,
   text,
   variant,
@@ -22,7 +23,7 @@ export default function AnimatedMenuItem({
   const [properties, set] = useSpring(() => ({
     config: config.molasses,
     opacity: 1,
-    color: "#000",
+    color: color,
     textDecoration: "none",
   }));
 
@@ -32,7 +33,7 @@ export default function AnimatedMenuItem({
   };
 
   const MouseLeave = () => {
-    set({ opacity: 1, textDecoration: "none", color: "#000" });
+    set({ opacity: 1, textDecoration: "none", color: color });
     setHover(false);
   };
 

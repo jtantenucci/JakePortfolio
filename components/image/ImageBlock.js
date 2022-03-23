@@ -13,8 +13,8 @@ export default function ImageBlock({path, title, maxWidth, height, marginRight, 
     height: "auto",
     marginRight: "auto",
     marginLeft: "auto",
-    paddingTop: '100px',
-    paddingBottom: '100px',
+    paddingTop: columns ? '100px' : '50px',
+    paddingBottom: columns ? '100px' : '50px',
     placeholder: "none",
     blurDataURL: "none"
   }
@@ -26,14 +26,14 @@ export default function ImageBlock({path, title, maxWidth, height, marginRight, 
         height: {height},
         marginRight: {marginRight},
         marginLeft: {marginLeft},
-        paddingTop: columns ? {paddingTop} : '50px',
-        paddingBottom: columns ? {paddingBottom} : '50px'
+        paddingTop: {paddingTop},
+        paddingBottom: {paddingBottom}
       }}
     >
       <Image
         src={path}
         alt={title}
-        quality={80}
+        quality={75}
         objectFit="contain"
         blurDataURL={blurDataURL}
         placeholder={placeholder}

@@ -1,4 +1,4 @@
-import { responsiveFontSizes } from '@material-ui/core';
+import { responsiveFontSizes } from '@mui/material/styles';
 import { createTheme } from '@mui/material/styles';
 
 let theme = createTheme ({
