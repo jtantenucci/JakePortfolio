@@ -1,4 +1,3 @@
-import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import React from "react";
@@ -14,7 +13,6 @@ import SpinIndex from "public/SpinIndex.jpg";
 import SpinStory from "public/SpinStory.jpg";
 import SpinCampaign from "public/SpinCampaign.jpg";
 import SpinInstagram from "public/SpinInstagram.jpg";
-import SpinIntersection from "public/SpinIntersection.jpg";
 import SpinLogo from "public/SpinLogo.gif";
 import HeadComponent from "components/HeadComponent";
 
