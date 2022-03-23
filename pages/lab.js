@@ -2,7 +2,6 @@ import React from "react";
 import ImageList from "@mui/material/ImageList";
 import { WorkImageArray } from "components/WorkImageArray";
 import WorkImage from "components/image/WorkImage";
-import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import PageHeader from "components/PageHeader";
@@ -20,9 +19,7 @@ export default function Lab() {
   return (
     <>
       <HeadComponent title="lab - Jake Lamothe" />
-      {columns ? null : <Navigation />}
-      <Toolbar />
-      {columns ? <MiniMenu /> : null}
+      {columns ? <MiniMenu /> : <Navigation />}
       <Box
         container
         sx={{

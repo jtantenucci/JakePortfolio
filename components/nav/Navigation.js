@@ -3,6 +3,7 @@ import { useTheme } from "@mui/material/styles";
 import SpringMenu from "./SpringMenu";
 import Toolbar from "@mui/material/Toolbar";
 import { AppBar } from "@mui/material";
+import PageAnchorBox from "components/PageAnchorBox";
 
 export default function Navigation({
   changedColor,
@@ -12,6 +13,7 @@ export default function Navigation({
   const theme = useTheme();
   return (
     <>
+      <PageAnchorBox />
       <AppBar
         position="sticky"
         elevation={0}

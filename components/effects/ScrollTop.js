@@ -17,11 +17,12 @@ export default function ScrollTop( props ) {
   
   const handleClick = (event) => {
     const anchor = (event.target.ownerDocument || document).querySelector(
-      columns ?  "#top-menu-anchor" : "#back-to-top-anchor"
+      "#top-menu-anchor" 
     );
 
     if (anchor) {
       anchor.scrollIntoView({
+
         behavior: "smooth",
         block: "end",
       });
