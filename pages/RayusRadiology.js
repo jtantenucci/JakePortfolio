@@ -26,17 +26,15 @@ export default function RayusRadiology() {
   return (
     <>
       <HeadComponent title="rayus - Jake Lamothe" />
-      {columns ? null : (
+      {columns ? 
+        <MiniMenu changedColor={"#0484bd"} changedColor2={"#f2581b"} /> 
+        : (
         <Navigation changedColor={"#0484bd"} changedColor2={"#f2581b"} />
       )}
       <Box
         container
         sx={{ marginLeft: "auto", marginRight: "auto", maxWidth: "90vw" }}
       >
-        <Toolbar />
-        {columns ? (
-          <MiniMenu changedColor={"#0484bd"} changedColor2={"#f2581b"} />
-        ) : null}
         <PageHeader title="rayus" />
         <ImageBlock
           path={RayusSign}

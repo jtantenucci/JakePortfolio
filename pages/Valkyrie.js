@@ -31,19 +31,23 @@ export default function Valkyrie() {
   return (
     <>
       <HeadComponent title="valkyrie - Jake Lamothe" />
-      {columns ? null : <Navigation />}
+      {columns ? (
+        <MiniMenu
+          changedColor={"#14359a"}
+          changedColor2={"#ed5439"}
+          changedColor3={"#ccff00"}
+        />
+      ) : (
+        <Navigation
+          changedColor={"#14359a"}
+          changedColor2={"#ed5439"}
+          changedColor3={"#ccff00"}
+        />
+      )}
       <Box
         container
         sx={{ marginLeft: "auto", marginRight: "auto", maxWidth: "90vw" }}
       >
-        <Toolbar />
-        {columns ? (
-          <MiniMenu
-            changedColor={"#14359a"}
-            changedColor2={"#ed5439"}
-            changedColor3={"#ccff00"}
-          />
-        ) : null}
         <PageHeader title="valkyrie" />
         <ImageBlock
           path={ValkyrieMock}
