@@ -17,18 +17,7 @@ export default function Info() {
   return (
     <>
     <HeadComponent></HeadComponent>
-      {columns ? null : <Navigation />}
-      <Toolbar />
-      <Box
-        container
-        sx={{
-          maxWidth: columns ? "75vw" : "90vw",
-          marginLeft: "auto",
-          marginRight: "auto",
-        }}
-      >
-        {columns ? <MiniMenu /> : null}
-      </Box>
+      {columns ? <MiniMenu /> : <Navigation />}
       <Box
         container
         sx={{

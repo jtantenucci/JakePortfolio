@@ -21,6 +21,8 @@ export default function Lab() {
     <>
       <HeadComponent title="lab - Jake Lamothe" />
       {columns ? null : <Navigation />}
+      <Toolbar />
+      {columns ? <MiniMenu /> : null}
       <Box
         container
         sx={{
@@ -32,8 +34,6 @@ export default function Lab() {
           justifyContent: "flex-start",
         }}
       >
-        <Toolbar />
-        {columns ? <MiniMenu /> : null}
         <PageHeader title="lab" />
         <ImageBlock maxWidth="50vw" path={MintTile} title="MintTile" />
       </Box>

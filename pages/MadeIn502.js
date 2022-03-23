@@ -29,7 +29,6 @@ export default function MadeIn502() {
       <HeadComponent title="mint 502 - Jake Lamothe" />
       {columns ? null : <Navigation changedColor="#87edaf" />}
       <Box sx={{ marginLeft: "auto", marginRight: "auto", maxWidth: "90vw" }}>
-        <Toolbar />
         {columns ? <MiniMenu changedColor="#87edaf" /> : null}
         <PageHeader title="mint 502" />
         <ImageBlock

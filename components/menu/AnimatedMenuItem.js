@@ -3,6 +3,7 @@ import { useSpring, animated, config } from "react-spring";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Link from "next/link";
+import {Link as MuiLink} from '@mui/material';
 import Typography from "@mui/material/Typography";
 
 export default function AnimatedMenuItem({
@@ -11,10 +12,12 @@ export default function AnimatedMenuItem({
   variant,
   sx,
   changedColor,
+  useMui
 }) {
   const [hover, setHover] = useState(false);
   AnimatedMenuItem.defaultProps = {
     changedColor: "#4287f5",
+    useMui: false,
   };
   const [properties, set] = useSpring(() => ({
     config: config.molasses,
@@ -39,6 +42,28 @@ export default function AnimatedMenuItem({
 
   return (
     <>
+      {useMui ? 
+        <MuiLink href={href}>
+        <AnimatedLink
+          sx={sx}
+          variant={variant}
+          typography={{
+            "&:hover": {
+              cursor: "pointer",
+            },
+          }}
+          style={{
+            opacity: properties.opacity,
+            textDecoration: properties.textDecoration,
+            color: properties.color,
+          }}
+          onMouseEnter={MouseEnter}
+          onMouseLeave={MouseLeave}
+        >
+          {text}
+        </AnimatedLink>
+      </MuiLink>
+      :
       <Link passHref href={href}>
         <AnimatedLink
           sx={sx}
@@ -58,7 +83,7 @@ export default function AnimatedMenuItem({
         >
           {text}
         </AnimatedLink>
-      </Link>
+      </Link>}
     </>
   );
 }

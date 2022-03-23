@@ -5,7 +5,6 @@ import Dialog from "@mui/material/Dialog";
 import MenuIcon from "@mui/icons-material/Menu";
 import Box from "@mui/material/Box";
 import AnimatedMenuItem from "../menu/AnimatedMenuItem";
-import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import { useSpring, animated } from "react-spring";
@@ -43,7 +42,11 @@ Fade.propTypes = {
   onExited: PropTypes.func,
 };
 
-export default function SpringMenu({ changedColor, changedColor2, changedColor3 }) {
+export default function SpringMenu({
+  changedColor,
+  changedColor2,
+  changedColor3,
+}) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const preventDefault = (event) => event.preventDefault();
@@ -58,33 +61,46 @@ export default function SpringMenu({ changedColor, changedColor2, changedColor3 
 
   return (
     <div>
-      <IconButton sx={{ marginLeft: "5px"}} onClick={handleOpen} aria-label="menu">
-        <MenuIcon sx={{color: "black"}}/>
+      <IconButton
+        onClick={handleOpen}
+        aria-label="menu"
+      >
+        <MenuIcon sx={{ color: "black" }} />
       </IconButton>
       <Dialog
         fullScreen
-        PaperProps={{ sx: {overflowX: "hidden", overflowY: "hidden"}, elevation: 0 }}
+        PaperProps={{
+          sx: { overflowX: "hidden", overflowY: "hidden" },
+          elevation: 0,
+        }}
         open={open}
+        disableScrollLock={true}
         onClose={handleClose}
         TransitionComponent={Fade}
-        scroll="body"
       >
-          <Toolbar
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              backgroundColor: "white",
-            }}
+        <Box
+          sx={{
+            backgroundColor: "white",
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "row",
+            justifyContent: "center",
+            paddingTop: "5px",
+            paddingBottom: "5px",
+            marginLeft: '3px',
+            marginTop: '2px'
+          }}
+        >
+          <IconButton
+            edge="start"
+            color="primary"
+            onClick={handleClose}
+            aria-label="close"
+            size="small"
           >
-            <IconButton
-              edge="start"
-              color="primary"
-              onClick={handleClose}
-              aria-label="close"
-            >
-              <CloseIcon />
-            </IconButton>
-          </Toolbar>
+            <CloseIcon />
+          </IconButton>
+        </Box>
         <Fade in={open}>
           <Box
             sx={{
@@ -94,13 +110,28 @@ export default function SpringMenu({ changedColor, changedColor2, changedColor3 
               flexDirection: "column",
               justifyContent: "center",
               height: "100vh",
-              paddingBottom: "50px"
+              paddingBottom: "50px",
             }}
           >
             <Trail open={open}>
-              <AnimatedMenuItem changedColor={changedColor} variant="h2" href="/" text="work" />
-              <AnimatedMenuItem changedColor={changedColor2 ? changedColor2 : changedColor} variant="h2" href="/info" text="info" />
-              <AnimatedMenuItem changedColor={changedColor3 ? changedColor3 : changedColor} variant="h2" href="/lab" text="lab" />
+              <AnimatedMenuItem
+                changedColor={changedColor}
+                variant="h2"
+                href="/"
+                text="work"
+              />
+              <AnimatedMenuItem
+                changedColor={changedColor2 ? changedColor2 : changedColor}
+                variant="h2"
+                href="/info"
+                text="info"
+              />
+              <AnimatedMenuItem
+                changedColor={changedColor3 ? changedColor3 : changedColor}
+                variant="h2"
+                href="/lab"
+                text="lab"
+              />
             </Trail>
           </Box>
         </Fade>

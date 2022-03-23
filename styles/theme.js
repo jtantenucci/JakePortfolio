@@ -74,12 +74,6 @@ let theme = createTheme ({
           backgroundColor: 'white',
         }
       },
-      MuiAppBar: {
-        defaultProps: {
-          padding: 0,
-          overflow: 0,
-        }
-      },
       MuiIconButton: {
         color: "#000"
       },

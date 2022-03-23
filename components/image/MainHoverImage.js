@@ -17,9 +17,9 @@ export default function MainHoverImage({ ...props }) {
   const [properties, set] = useSpring(() => ({
     xys: [0, 0, 1],
     config: {
-        tension: 120,
-        friction: 14,
-        clamp: true
+      tension: 120,
+      friction: 14,
+      clamp: true,
     },
   }));
   const AnimatedImageListItem = animated(ImageListItem);
@@ -27,17 +27,22 @@ export default function MainHoverImage({ ...props }) {
 
   const MouseEnter = () => {
     setHover(true);
-  }
+  };
 
   const MouseLeave = () => {
     set({ xys: [0, 0, 1] });
-    setHover(false)
-  }
+    setHover(false);
+  };
 
   return (
     <>
       <AnimatedImageListItem
         cols={1}
+        sx={{
+          "&:hover": {
+            cursor: "pointer",
+          },
+        }}
         onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
         onMouseEnter={MouseEnter}
         onMouseLeave={MouseLeave}

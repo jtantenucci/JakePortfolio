@@ -18,7 +18,6 @@ export default function Work({ styles }) {
 
   return (
     <>
-      { columns ? <Toolbar /> : <null /> }
       { columns ? <MainMenu /> : <Navigation /> }
       <Box container sx={{ marginLeft: "auto", marginRight: "auto", width: "90vw", display: "flex", flexDirection: "column", justifyContent: "flex-start"}}>
         <Typography variant="h4" sx={{ justifySelf: "start" }}>
