@@ -22,7 +22,6 @@ export default function ScrollTop( props ) {
 
     if (anchor) {
       anchor.scrollIntoView({
-
         behavior: "smooth",
         block: "end",
       });
