@@ -6,9 +6,10 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import Typography from "@mui/material/Typography";
 import MiniMenu from "components/menu/MiniMenu";
 import Navigation from "components/nav/Navigation";
-import Link from '@mui/material/Link';
-import PageFooter from 'components/PageFooter';
+import Link from "@mui/material/Link";
+import PageFooter from "components/PageFooter";
 import HeadComponent from "components/HeadComponent";
+import AnimatedMenuItem from "components/menu/AnimatedMenuItem";
 
 export default function Info() {
   const theme = useTheme();
@@ -16,8 +17,8 @@ export default function Info() {
 
   return (
     <>
-    <HeadComponent></HeadComponent>
-      {columns ? <MiniMenu color="#000"/> : <Navigation />}
+      <HeadComponent></HeadComponent>
+      {columns ? <MiniMenu color="#000" /> : <Navigation />}
       <Box
         container
         sx={{
@@ -34,18 +35,18 @@ export default function Info() {
           opportunities, so please feel free to say hi!
         </Typography>
         <Typography
-          sx={{ paddingTop: "50px", paddingBottom: "50px"}}
+          sx={{ paddingTop: "50px", paddingBottom: "50px" }}
           fontFamily="TWKLausanne-300"
           fontSize={columns ? 75 : 40}
         >
-          Currently working as an Art Director 
-          <Link
-            sx={{ paddingTop: "50px", lineHeight: "50px" }}
+          Currently working as an Art Director<AnimatedMenuItem
+            color="#000"
+            useMui="false"
+            sx={{ fontSize: columns ? 75 : 40 }}
             fontFamily="TWKLausanne-300"
-            underline="hover"
-            fontSize={columns ? 75 : 40}
             href="http://www.ludwigplus.com"
-          > @LUDWIG+.</Link>
+            text="@LUDWIG+."
+          />
         </Typography>
         <PageFooter color="#000" />
       </Box>

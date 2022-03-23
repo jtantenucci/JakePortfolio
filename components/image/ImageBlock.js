@@ -5,7 +5,7 @@ import Image from "next/image";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 
-export default function ImageBlock({path, title, maxWidth, height, marginRight, marginLeft, paddingTop, paddingBottom, placeholder, blurDataURL}) {
+export default function ImageBlock({path, title, maxWidth, height, marginRight, marginLeft, paddingTop, paddingBottom, placeholder, blurDataURL, priority}) {
   const theme = useTheme();
   const columns = useMediaQuery(theme.breakpoints.up("md"));
   ImageBlock.defaultProps = {
@@ -16,7 +16,8 @@ export default function ImageBlock({path, title, maxWidth, height, marginRight, 
     paddingTop: columns ? '100px' : '50px',
     paddingBottom: columns ? '100px' : '50px',
     placeholder: "none",
-    blurDataURL: "none"
+    blurDataURL: "none",
+    priority: false,
   }
 
   return (      
@@ -33,6 +34,7 @@ export default function ImageBlock({path, title, maxWidth, height, marginRight, 
       <Image
         src={path}
         alt={title}
+        priority={priority}
         quality={75}
         objectFit="contain"
         blurDataURL={blurDataURL}

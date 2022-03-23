@@ -37,6 +37,7 @@ export default function RayusRadiology() {
       >
         <PageHeader title="rayus" />
         <ImageBlock
+          priority={true}
           path={RayusSign}
           placeholder="blur"
           blurDataURL={rayusBlur}

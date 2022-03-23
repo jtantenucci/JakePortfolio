@@ -43,12 +43,12 @@ export default function Lab() {
         }}
         variant='masonry'
         cols={columns ? 4: 1}
-        gap={5}
+        gap={10}
       >
         {LabArray.map((item) => (
           <ImageBlock
-            paddingTop="0px"
-            paddingBottom="0px"
+            paddingTop="2px"
+            paddingBottom="2px"
             title={item.title}
             key={item.img}
             path={item.img}

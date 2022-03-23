@@ -32,6 +32,7 @@ export default function SpinItForward() {
       >
         <PageHeader title="spin" />
         <ImageBlock
+          priority={true}
           path={SpinIndex}
           placeholder="blur"
           blurDataURL={spinBlur}

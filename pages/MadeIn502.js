@@ -17,6 +17,7 @@ import MintColorsSpread from "public/MintColorsSpread.jpg";
 import MintAlternates from "public/MintAlternates.jpg";
 import MintHeader from "public/MintHeader.jpg";
 import HeadComponent from "components/HeadComponent";
+import AnimatedMenuItem from "components/menu/AnimatedMenuItem";
 
 export default function MadeIn502() {
   const theme = useTheme();
@@ -34,20 +35,27 @@ export default function MadeIn502() {
         <ImageBlock
           path={MintGalleryHead}
           placeholder="blur"
+          priority
           blurDataURL={mintBlur}
           title="Mint Gallery Head"
         />
         <PageText
+          paddingBottom={columns ? "50px" : "25px"}
           text="Mint 502 is Louisville, Kentucky's premier sneaker boutique.  
                  With a grand opening in late 2021 and little to no pre-existing brand materials, 
                  I was tasked with creating the brand's identity system."
         />
-        <PageSubtext
-          paddingTop={columns ? "0px" : "1px"}
-          paddingBottom={50}
-          maxWidth="50vw"
-          text="Client → Mint 502"
-        />
+        <Box sx={{ marginLeft: "auto", marginRight: "auto", paddingTop: columns ? "0px" : "1px", maxWidth: columns ? "50vw" : "100vw", paddingBottom: "50px" }}>
+          <AnimatedMenuItem
+            color="rgba(0, 0, 0, 0.3)"
+            changedColor="#87edaf"
+            useMui="false"
+            variant={columns ? 'h4' : 'h6' }
+            paddingBottom={50}
+            href="https://www.instagram.com/mint.502/"
+            text="Client → Mint 502"
+          />
+        </Box>
         <ImageBlock
           marginLeft={0}
           maxWidth="70vw"

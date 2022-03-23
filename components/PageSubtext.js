@@ -4,7 +4,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-export default function PageSubtext({ text, marginLeft, marginRight, maxWidth, paddingTop, paddingBottom}) {
+export default function PageSubtext({ text, marginLeft, marginRight, maxWidth, paddingTop, paddingBottom, component}) {
   const theme = useTheme();
   const columns = useMediaQuery(theme.breakpoints.up("md"));
   PageSubtext.defaultProps = {
@@ -13,6 +13,7 @@ export default function PageSubtext({ text, marginLeft, marginRight, maxWidth, p
     maxWidth: "50vw",
     paddingTop: "50px",
     paddingBottom: "50px",
+    component: "typography"
   }
 
   return (      
@@ -26,6 +27,7 @@ export default function PageSubtext({ text, marginLeft, marginRight, maxWidth, p
       }}
     >
         <Typography 
+            component={component}
             sx={{ lineHeight: "40px", color: "rgba(0, 0, 0, 0.3)" }}
             variant={columns ? 'h4' : 'h6' }
         >

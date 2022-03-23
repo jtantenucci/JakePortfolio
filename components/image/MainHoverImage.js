@@ -39,6 +39,7 @@ export default function MainHoverImage({ ...props }) {
       <AnimatedImageListItem
         cols={1}
         sx={{
+          display: "block",
           "&:hover": {
             cursor: "pointer",
           },

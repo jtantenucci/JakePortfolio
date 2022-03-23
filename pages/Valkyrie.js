@@ -50,6 +50,7 @@ export default function Valkyrie() {
       >
         <PageHeader title="valkyrie" />
         <ImageBlock
+          priority={true}
           path={ValkyrieMock}
           placeholder="blur"
           blurDataURL={valkBlur}
