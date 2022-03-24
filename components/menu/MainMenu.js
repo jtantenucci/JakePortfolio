@@ -4,7 +4,6 @@ import PageAnchorBox from "components/PageAnchorBox";
 import AnimatedMenuItem from "./AnimatedMenuItem";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Box from "@mui/material/Box";
-import StrikeThroughText from "components/effects/StrikeThroughText";
 
 export default function MainMenu({ changedColor, color }) {
   const theme = useTheme();
