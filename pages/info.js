@@ -35,11 +35,13 @@ export default function Info() {
           opportunities, so please feel free to say hi!
         </Typography>
         <Typography
-          sx={{ paddingTop: "50px", paddingBottom: "50px" }}
+          sx={{ paddingTop: "50px" }}
           fontFamily="TWKLausanne-300"
           fontSize={columns ? 75 : 40}
         >
-          Currently working as an Art Director<AnimatedMenuItem
+          Currently working as an Art Director
+        </Typography>
+          <AnimatedMenuItem
             color="#000"
             useMui="false"
             sx={{ fontSize: columns ? 75 : 40 }}
@@ -47,7 +49,6 @@ export default function Info() {
             href="http://www.ludwigplus.com"
             text="@LUDWIG+."
           />
-        </Typography>
         <PageFooter color="#000" />
       </Box>
     </>

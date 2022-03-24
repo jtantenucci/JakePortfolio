@@ -17,9 +17,9 @@ export default function Lab() {
   const columns = useMediaQuery(theme.breakpoints.up("md"));
 
   return (
-    <Box sx={{backgroundColor: "#000"}}>
+    <Box sx={{backgroundColor: 'primary.main'}}>
       <HeadComponent title="lab - Jake Lamothe" />
-      {columns ? <MiniMenu color="#fff"/> : <Navigation />}
+      {columns ? <MiniMenu color="#fff"/> : <Navigation lab={true} />}
       <Box
         container
         sx={{
@@ -50,7 +50,7 @@ export default function Lab() {
             paddingTop="2px"
             paddingBottom="2px"
             title={item.title}
-            key={item.img}
+            key={item.id}
             path={item.img}
           />
         ))}

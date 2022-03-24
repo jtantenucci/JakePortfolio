@@ -52,17 +52,19 @@ export default function MainHoverImage({ ...props }) {
         }}
       >
         <Link passHref href={props.path}>
-          <Image
-            src={props.img}
-            alt={props.title}
-            height="443"
-            width="635"
-            sizes="50vw"
-            quality="80"
-            placeholder="blur"
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="
-            layout="responsive"
-          />
+          <a>
+            <Image
+              src={props.img}
+              alt={props.title}
+              height="443"
+              width="635"
+              sizes="50vw"
+              quality="80"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="
+              layout="responsive"
+            />
+          </a>
         </Link>
       </AnimatedImageListItem>
     </>

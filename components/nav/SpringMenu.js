@@ -28,8 +28,16 @@ const Fade = React.forwardRef(function Fade(props, ref) {
     },
   });
 
+  const [styles, set] = useSpring(() => ({
+    from: { opacity: 0 },
+    to: { opacity: open ? 1 : 0 },
+    onEnter: () => {
+      set(onEnter())
+    },
+  }));
+
   return (
-    <animated.div ref={ref} style={style} {...other}>
+    <animated.div ref={ref} style={styles} {...other}>
       {children}
     </animated.div>
   );
@@ -43,6 +51,7 @@ Fade.propTypes = {
 };
 
 export default function SpringMenu({
+  lab,
   changedColor,
   changedColor2,
   changedColor3,
@@ -65,7 +74,7 @@ export default function SpringMenu({
         onClick={handleOpen}
         aria-label="menu"
       >
-        <MenuIcon sx={{ color: "black" }} />
+        <MenuIcon sx={{ color: lab ? "#fff" : "#000" }} />
       </IconButton>
       <Dialog
         fullScreen
@@ -80,7 +89,6 @@ export default function SpringMenu({
       >
         <Box
           sx={{
-            backgroundColor: "white",
             display: "flex",
             alignItems: "center",
             flexDirection: "row",
@@ -104,7 +112,6 @@ export default function SpringMenu({
         <Fade in={open}>
           <Box
             sx={{
-              backgroundColor: "white",
               display: "flex",
               alignItems: "center",
               flexDirection: "column",

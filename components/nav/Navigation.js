@@ -6,12 +6,16 @@ import { AppBar } from "@mui/material";
 import PageAnchorBox from "components/PageAnchorBox";
 
 export default function Navigation({
+  lab,
   color,
   changedColor,
   changedColor2,
   changedColor3,
 }) {
   const theme = useTheme();
+  Navigation.defaultProps = {
+    lab: false
+  }
   return (
     <>
       <PageAnchorBox />
@@ -19,6 +23,7 @@ export default function Navigation({
         position="sticky"
         elevation={0}
         id="back-to-top-anchor"
+        color={lab ? 'primary' : 'secondary'}
         sx={{
           paddingTop: "5px",
           paddingBottom: "5px",
@@ -26,10 +31,10 @@ export default function Navigation({
           justifyContent: "center",
           alignItems: "start",
           flexDirection: "row",
-          backgroundColor: "white",
         }}
       >
         <SpringMenu
+          lab={lab}
           color={color}
           changedColor={changedColor}
           changedColor2={changedColor2 ? changedColor2 : changedColor}
