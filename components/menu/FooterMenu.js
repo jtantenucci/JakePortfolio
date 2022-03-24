@@ -17,10 +17,12 @@ export default function FooterMenu({
     <>
       <Box
         sx={{
+          marginRight: "auto",
+          marginLeft: "0px",
           display: "flex",
           flexDirection: columns ? "row" : "column",
           paddingBottom: "25px",
-          justifyContent: "flex-start",
+          justifyContent: "space-evenly",
         }}
       >
         <AnimatedMenuItem
@@ -30,6 +32,8 @@ export default function FooterMenu({
           color={color}
           variant={columns ? "h4" : "h5"}
           changedColor={changedColor}
+          height="2px"
+          changedWidth="90%"
           sx={{
             paddingRight: "10px",
           }}
@@ -41,6 +45,8 @@ export default function FooterMenu({
           color={color}
           variant={columns ? "h4" : "h5"}
           changedColor={changedColor2 ? changedColor2 : changedColor}
+          height="2px"
+          changedWidth={ columns ? "90%" : "72%" }
           sx={{
             paddingRight: "10px",
           }}
@@ -52,6 +58,8 @@ export default function FooterMenu({
           color={color}
           variant={columns ? "h4" : "h5"}
           changedColor={changedColor3 ? changedColor3 : changedColor}
+          height="2px"
+          changedWidth={ columns ? "90%" : "50%" }
           sx={{
             paddingRight: "10px",
           }}

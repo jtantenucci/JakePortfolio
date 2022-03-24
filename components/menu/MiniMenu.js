@@ -19,6 +19,8 @@ export default function MiniMenu({
           sx={{
             display: "flex",
             paddingBottom: "25px",
+            marginLeft: "auto",
+            marginRight: "0",
             justifyContent: "flex-end",
           }}
         >
@@ -52,6 +54,7 @@ export default function MiniMenu({
             changedColor={changedColor3 ? changedColor3 : changedColor}
             sx={{
               paddingLeft: "10px",
+              paddingRight: "10px",
             }}
           />
         </Box>

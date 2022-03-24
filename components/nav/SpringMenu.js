@@ -79,13 +79,13 @@ export default function SpringMenu({
       <Dialog
         fullScreen
         PaperProps={{
-          sx: { overflowX: "hidden", overflowY: "hidden" },
+          sx: { overflowX: "hidden", overflowY: "hidden", background: lab ? "#000" : "#fff" },
           elevation: 0,
+
         }}
         open={open}
         disableScrollLock={true}
         onClose={handleClose}
-        TransitionComponent={Fade}
       >
         <Box
           sx={{
@@ -96,12 +96,13 @@ export default function SpringMenu({
             paddingTop: "5px",
             paddingBottom: "5px",
             marginLeft: '3px',
-            marginTop: '2px'
+            marginTop: '2px',
+            background: lab ? "#000" : "#fff"
           }}
         >
           <IconButton
             edge="start"
-            color="primary"
+            color={ lab ? "secondary" : "primary" }
             onClick={handleClose}
             aria-label="close"
             size="small"
@@ -122,23 +123,26 @@ export default function SpringMenu({
           >
             <Trail open={open}>
               <AnimatedMenuItem
-                color="#000"
+                color={lab ? "#fff" : "#000"}
                 changedColor={changedColor}
                 variant="h2"
+                height="7px"
                 href="/"
                 text="work"
               />
               <AnimatedMenuItem
-                color="#000"
+                color={lab ? "#fff" : "#000"}
                 changedColor={changedColor2 ? changedColor2 : changedColor}
                 variant="h2"
+                height="7px"
                 href="/info"
                 text="info"
               />
               <AnimatedMenuItem
-                color="#000"
+                color={lab ? "#fff" : "#000"}
                 changedColor={changedColor3 ? changedColor3 : changedColor}
                 variant="h2"
+                height="7px"
                 href="/lab"
                 text="lab"
               />

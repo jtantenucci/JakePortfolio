@@ -7,6 +7,8 @@ import {Link as MuiLink} from '@mui/material';
 import Typography from "@mui/material/Typography";
 
 export default function AnimatedMenuItem({
+  changedWidth,
+  height,
   color,
   href,
   text,
@@ -17,7 +19,9 @@ export default function AnimatedMenuItem({
 }) {
   const [hover, setHover] = useState(false);
   AnimatedMenuItem.defaultProps = {
+    changedWidth: "100%",
     changedColor: "#4287f5",
+    height: "5px",
     useMui: false,
   };
   const [properties, set] = useSpring(() => ({
@@ -27,13 +31,20 @@ export default function AnimatedMenuItem({
     textDecoration: "none",
   }));
 
+  const [stProps, setSt] = useSpring(() => ({
+    config: config.default,
+    width: "0%",
+  }));
+
   const MouseEnter = () => {
-    set({ opacity: 0.4, textDecoration: "line-through", color: changedColor });
+    set({ opacity: 0.4, color: changedColor });
+    setSt({ width: changedWidth } );
     setHover(true);
   };
 
   const MouseLeave = () => {
-    set({ opacity: 1, textDecoration: "none", color: color });
+    set({ opacity: 1, color: color });
+    setSt({ width: "0%"} );
     setHover(false);
   };
 
@@ -44,6 +55,7 @@ export default function AnimatedMenuItem({
   return (
     <>
       {useMui ? 
+        <div style={{ position: "relative", display: "inline-block" }}>
         <MuiLink href={href}>
         <AnimatedLink
           sx={sx}
@@ -64,7 +76,23 @@ export default function AnimatedMenuItem({
           {text}
         </AnimatedLink>
       </MuiLink>
+      <animated.div
+          onMouseEnter={MouseEnter}
+          onMouseLeave={MouseLeave}
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: 0,
+            justifyContent: "center",
+            width: stProps.width,
+            height: height,
+            opacity: properties.opacity,
+            background: properties.color,
+          }}
+        />
+      </div>
       :
+      <div style={{ position: "relative", display: "inline-block" }}>
       <Link passHref href={href}>
         <AnimatedLink
           sx={sx}
@@ -84,7 +112,22 @@ export default function AnimatedMenuItem({
         >
           {text}
         </AnimatedLink>
-      </Link>}
+      </Link>
+      <animated.div
+          onMouseEnter={MouseEnter}
+          onMouseLeave={MouseLeave}
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: 0,
+            justifySelf: "center",
+            width: stProps.width,
+            height: height,
+            opacity: properties.opacity,
+            background: properties.color,
+          }}
+        />
+      </div>}
     </>
   );
 }

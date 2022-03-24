@@ -42,7 +42,7 @@ export default function Lab() {
           backgroundClip: "border-box"
         }}
         variant='masonry'
-        cols={columns ? 4: 1}
+        cols={columns ? 4 : 2}
         gap={10}
       >
         {LabArray.map((item) => (

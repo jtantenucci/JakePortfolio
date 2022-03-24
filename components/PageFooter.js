@@ -11,7 +11,7 @@ export default function PageFooter({ color, changedColor, changedColor2, changed
 
     return (
         <>
-            <Box container sx={{ marginLeft: "auto", marginRight: "auto", maxWidth: "90vw", display: "flex", flexDirection: "row", paddingTop: columns ? "100px" : "25px", paddingBottom: columns ? "50px" : "10px",justifyContent: "space-between" }}>
+            <Box container sx={{ marginLeft: "auto", marginRight: "auto", maxWidth: "90vw", display: "flex", flexDirection: "row", paddingTop: columns ? "100px" : "25px", paddingBottom: columns ? "50px" : "10px", justifyContent: "space-between" }}>
                 <FooterMenu color={color} changedColor={changedColor} changedColor2={changedColor2 ? changedColor2 : changedColor} changedColor3={changedColor3 ? changedColor3 : changedColor} />
                 <Typography sx={{ justifySelf: "end" }} variant={columns ? "h4" : "h5"}>
                     jake lamothe 2022©

@@ -6,10 +6,8 @@ export default function Trail ({ open, children }) {
     const trail = useTrail(items.length, {
       config: { tension: 120, friction: 12, clamp: true },
       opacity: open ? 1 : 0,
-      x: open ? 0 : 60,
-      y: open ? 0 : 200,
-      height: open ? 100 : 0,
-      from: { opacity: 0, x: 0, y: 400, height: 0 },
+      x: open ? 0 : 100,
+      from: { opacity: 0, x: 100 }
     })
     return (
       <div>

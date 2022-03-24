@@ -4,6 +4,7 @@ import PageAnchorBox from "components/PageAnchorBox";
 import AnimatedMenuItem from "./AnimatedMenuItem";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Box from "@mui/material/Box";
+import StrikeThroughText from "components/effects/StrikeThroughText";
 
 export default function MainMenu({ changedColor, color }) {
   const theme = useTheme();
@@ -16,22 +17,20 @@ export default function MainMenu({ changedColor, color }) {
           sx={{
             marginLeft: "auto",
             marginRight: "auto",
-            justifyContent: "center",
+            justifyContent: "space-evenly",
             width: "90vw",
             display: "flex",
             paddingBottom: "100px",
           }}
         >
+
           <AnimatedMenuItem
             href="/"
             text="work"
             color="#000"
             variant={columns ? "h1" : "h2"}
             changedColor={changedColor}
-            sx={{
-              paddingRight: "50px",
-              paddingLeft: "10px",
-            }}
+            height="10px"
           />
           <AnimatedMenuItem
             href="/info"
@@ -39,10 +38,7 @@ export default function MainMenu({ changedColor, color }) {
             color="#000"
             variant={columns ? "h1" : "h2"}
             changedColor={changedColor}
-            sx={{
-              paddingRight: "50px",
-              paddingLeft: "50px",
-            }}
+            height="10px"
           />
           <AnimatedMenuItem
             href="/lab"
@@ -50,10 +46,7 @@ export default function MainMenu({ changedColor, color }) {
             color="#000"
             variant={columns ? "h1" : "h2"}
             changedColor={changedColor}
-            sx={{
-              paddingRight: "10px",
-              paddingLeft: "50px",
-            }}
+            height="10px"
           />
         </Box>
       </PageAnchorBox>
