@@ -17,35 +17,25 @@ export default function AnimatedMenuItem({
   changedColor,
   useMui
 }) {
-  const [hover, setHover] = useState(false);
   AnimatedMenuItem.defaultProps = {
     changedWidth: "100%",
-    changedColor: "#4287f5",
+    changedColor: "#000",
     height: "5px",
     useMui: false,
   };
-  const [properties, set] = useSpring(() => ({
-    config: config.molasses,
-    opacity: 1,
-    color: color,
-    textDecoration: "none",
-  }));
 
-  const [stProps, setSt] = useSpring(() => ({
+  const [properties, set] = useSpring(() => ({
     config: config.default,
+    color: color,
     width: "0%",
   }));
 
   const MouseEnter = () => {
-    set({ opacity: 0.4, color: changedColor });
-    setSt({ width: changedWidth } );
-    setHover(true);
+    set({ color: changedColor, width: changedWidth });
   };
 
   const MouseLeave = () => {
-    set({ opacity: 1, color: color });
-    setSt({ width: "0%"} );
-    setHover(false);
+    set({ color: color, width: "0%" });
   };
 
   const AnimatedLink = animated(Typography);
@@ -66,8 +56,6 @@ export default function AnimatedMenuItem({
             },
           }}
           style={{
-            opacity: properties.opacity,
-            textDecoration: properties.textDecoration,
             color: properties.color,
           }}
           onMouseEnter={MouseEnter}
@@ -84,9 +72,8 @@ export default function AnimatedMenuItem({
             top: "50%",
             left: 0,
             justifyContent: "center",
-            width: stProps.width,
+            width: properties.width,
             height: height,
-            opacity: properties.opacity,
             background: properties.color,
           }}
         />
@@ -103,8 +90,6 @@ export default function AnimatedMenuItem({
             },
           }}
           style={{
-            opacity: properties.opacity,
-            textDecoration: properties.textDecoration,
             color: properties.color,
           }}
           onMouseEnter={MouseEnter}
@@ -121,9 +106,8 @@ export default function AnimatedMenuItem({
             top: "50%",
             left: 0,
             justifySelf: "center",
-            width: stProps.width,
+            width: properties.width,
             height: height,
-            opacity: properties.opacity,
             background: properties.color,
           }}
         />

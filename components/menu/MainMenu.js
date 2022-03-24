@@ -5,7 +5,7 @@ import AnimatedMenuItem from "./AnimatedMenuItem";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Box from "@mui/material/Box";
 
-export default function MainMenu({ changedColor, color }) {
+export default function MainMenu() {
   const theme = useTheme();
   const columns = useMediaQuery(theme.breakpoints.up("lg"));
 
@@ -22,13 +22,11 @@ export default function MainMenu({ changedColor, color }) {
             paddingBottom: "100px",
           }}
         >
-
           <AnimatedMenuItem
             href="/"
             text="work"
             color="#000"
             variant={columns ? "h1" : "h2"}
-            changedColor={changedColor}
             height="10px"
           />
           <AnimatedMenuItem
@@ -36,7 +34,6 @@ export default function MainMenu({ changedColor, color }) {
             text="info"
             color="#000"
             variant={columns ? "h1" : "h2"}
-            changedColor={changedColor}
             height="10px"
           />
           <AnimatedMenuItem
@@ -44,7 +41,6 @@ export default function MainMenu({ changedColor, color }) {
             text="lab"
             color="#000"
             variant={columns ? "h1" : "h2"}
-            changedColor={changedColor}
             height="10px"
           />
         </Box>

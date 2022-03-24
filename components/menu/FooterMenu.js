@@ -4,12 +4,7 @@ import AnimatedMenuItem from "./AnimatedMenuItem";
 import Box from "@mui/material/Box";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
-export default function FooterMenu({
-  color,
-  changedColor,
-  changedColor2,
-  changedColor3,
-}) {
+export default function FooterMenu({ color, changedColor }) {
   const theme = useTheme();
   const columns = useMediaQuery(theme.breakpoints.up("md"));
 
@@ -30,8 +25,8 @@ export default function FooterMenu({
           href="https://www.instagram.com/la.brains/"
           text="instagram"
           color={color}
-          variant={columns ? "h4" : "h5"}
           changedColor={changedColor}
+          variant={columns ? "h4" : "h5"}
           height="2px"
           changedWidth="90%"
           sx={{
@@ -43,8 +38,8 @@ export default function FooterMenu({
           href="https://www.linkedin.com/in/jakelamothe/"
           text="linkedin"
           color={color}
+          changedColor={changedColor}
           variant={columns ? "h4" : "h5"}
-          changedColor={changedColor2 ? changedColor2 : changedColor}
           height="2px"
           changedWidth={ columns ? "90%" : "72%" }
           sx={{
@@ -56,8 +51,8 @@ export default function FooterMenu({
           href="mailto:jake.lamothe@gmail.com"
           text="email"
           color={color}
+          changedColor={changedColor}
           variant={columns ? "h4" : "h5"}
-          changedColor={changedColor3 ? changedColor3 : changedColor}
           height="2px"
           changedWidth={ columns ? "90%" : "50%" }
           sx={{

@@ -1,4 +1,3 @@
-import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import React from "react";
@@ -26,15 +25,8 @@ export default function RayusRadiology() {
   return (
     <>
       <HeadComponent title="rayus - Jake Lamothe" />
-      {columns ? 
-        <MiniMenu color="#000" changedColor={"#0484bd"} changedColor2={"#f2581b"} /> 
-        : (
-        <Navigation changedColor={"#0484bd"} changedColor2={"#f2581b"} />
-      )}
-      <Box
-        container
-        sx={{ marginLeft: "auto", marginRight: "auto", maxWidth: "90vw" }}
-      >
+      {columns ? <MiniMenu color="#000" /> : <Navigation /> }
+      <Box container sx={{ marginLeft: "auto", marginRight: "auto", maxWidth: "90vw" }}>
         <PageHeader title="rayus" />
         <ImageBlock
           priority={true}
@@ -95,7 +87,7 @@ export default function RayusRadiology() {
           title="Rayus Social Tile Gif"
         />
       </Box>
-      <PageFooter color="#000" changedColor={"#0484bd"} changedColor2={"#f2581b"} />
+      <PageFooter color="#000" />
     </>
   );
 }

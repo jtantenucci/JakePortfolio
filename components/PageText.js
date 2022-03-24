@@ -26,10 +26,7 @@ export default function PageText({ text, marginLeft, marginRight, maxWidth, padd
         paddingBottom: {paddingBottom}
       }}
     >
-        <Typography 
-            sx={{ lineHeight: columns ? "50px" : "30px", fontFamily: {fontFamily} }}
-            variant={columns ? 'h4' : 'h6' }
-        >
+        <Typography sx={{ lineHeight: columns ? "50px" : "30px", fontFamily: {fontFamily} }} variant={columns ? 'h4' : 'h6' }>
             {text}
         </Typography>
     </Box>

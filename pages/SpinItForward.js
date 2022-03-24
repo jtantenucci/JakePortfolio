@@ -25,7 +25,7 @@ export default function SpinItForward() {
   return (
     <>
       <HeadComponent title="spin - Jake Lamothe" />
-      {columns ? <MiniMenu  color="#000" changedColor={"#ed0000"} /> : <Navigation changedColor={"#ed0000"} />}
+      {columns ? <MiniMenu color="#000" /> : <Navigation />}
       <Box
         container
         sx={{ marginLeft: "auto", marginRight: "auto", maxWidth: "90vw" }}

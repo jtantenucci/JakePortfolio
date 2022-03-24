@@ -26,11 +26,7 @@ export default function PageSubtext({ text, marginLeft, marginRight, maxWidth, p
         paddingBottom: {paddingBottom}
       }}
     >
-        <Typography 
-            component={component}
-            sx={{ lineHeight: "40px", color: "rgba(0, 0, 0, 0.3)" }}
-            variant={columns ? 'h4' : 'h6' }
-        >
+        <Typography component={component} sx={{ lineHeight: "40px", color: "rgba(0, 0, 0, 0.3)" }} variant={ columns ? 'h4' : 'h6' }>
             {text}
         </Typography>
     </Box>

@@ -61,10 +61,6 @@
   flex-grow: 1;
 }
 
-.imageList {
-  overflow-x: hidden;
-}
-
 .title a {
   color: #000000;
   text-decoration: none;

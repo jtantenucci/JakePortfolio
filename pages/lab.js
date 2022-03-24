@@ -8,7 +8,6 @@ import ImageBlock from "components/image/ImageBlock";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import MiniMenu from "components/menu/MiniMenu";
 import Navigation from "components/nav/Navigation";
-import MintTile from "public/MintTile.gif";
 import HeadComponent from "components/HeadComponent";
 import PageFooter from "components/PageFooter";
 
@@ -17,21 +16,12 @@ export default function Lab() {
   const columns = useMediaQuery(theme.breakpoints.up("md"));
 
   return (
-    <Box sx={{backgroundColor: 'primary.main'}}>
+    <Box sx={{ backgroundColor: 'primary.main' }}>
       <HeadComponent title="lab - Jake Lamothe" />
-      {columns ? <MiniMenu color="#fff"/> : <Navigation lab={true} />}
-      <Box
-        container
-        sx={{
-          marginLeft: "auto",
-          marginRight: "auto",
-          width: "90vw",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-start",
-        }}
+      { columns ? <MiniMenu color="#fff" changedColor="#fff"/> : <Navigation lab={true} /> }
+      <Box container sx={{ marginLeft: "auto", marginRight: "auto", width: "90vw", display: "flex", flexDirection: "column", justifyContent: "flex-start" }}
       >
-        <PageHeader color="#fff" title="lab" />
+      <PageHeader color="#fff" title="lab" />
       </Box>
       <ImageList
         sx={{
@@ -55,7 +45,7 @@ export default function Lab() {
           />
         ))}
       </ImageList>
-      <PageFooter color="#fff"></PageFooter>
+      <PageFooter color="#fff" changedColor="#fff"></PageFooter>
     </Box>
   );
 }

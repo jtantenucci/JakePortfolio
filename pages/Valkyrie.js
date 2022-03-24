@@ -31,23 +31,8 @@ export default function Valkyrie() {
   return (
     <>
       <HeadComponent title="valkyrie - Jake Lamothe" />
-      {columns ? (
-        <MiniMenu color="#000"
-          changedColor={"#14359a"}
-          changedColor2={"#ed5439"}
-          changedColor3={"#ccff00"}
-        />
-      ) : (
-        <Navigation
-          changedColor={"#14359a"}
-          changedColor2={"#ed5439"}
-          changedColor3={"#ccff00"}
-        />
-      )}
-      <Box
-        container
-        sx={{ marginLeft: "auto", marginRight: "auto", maxWidth: "90vw" }}
-      >
+      { columns ? <MiniMenu color="#000"/> : <Navigation/> }
+      <Box container sx={{ marginLeft: "auto", marginRight: "auto", maxWidth: "90vw" }}>
         <PageHeader title="valkyrie" />
         <ImageBlock
           priority={true}
@@ -167,12 +152,7 @@ export default function Valkyrie() {
         path={ValkyrieNasdaq}
         title="Valkyrie Artboard 2"
       />
-      <PageFooter
-        color="#000"
-        changedColor={"#14359a"}
-        changedColor2={"#ed5439"}
-        changedColor3={"#ccff00"}
-      />
+      <PageFooter color="#000" />
     </>
   );
 }

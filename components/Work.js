@@ -11,7 +11,7 @@ import PageFooter from 'components/PageFooter';
 import { MainArray } from 'components/MainArray';
 
 
-export default function Work({ styles }) {
+export default function Work() {
   const theme = useTheme();
   const columns = useMediaQuery(theme.breakpoints.up("md"));
 
@@ -26,7 +26,7 @@ export default function Work({ styles }) {
           2021→2022
         </Typography>
       </Box>
-      <ImageList className={styles.imageList} sx={{ marginLeft: "auto", marginRight: "auto", width: "90vw", overflow: "hidden", backgroundClip: "border-box" }} cols={columns ? 2 : 1} gap={25}>
+      <ImageList sx={{ marginLeft: "auto", marginRight: "auto", width: "90vw", overflow: "hidden", backgroundClip: "border-box" }} cols={columns ? 2 : 1} gap={25}>
         {MainArray.map((item) => (
           <MainHoverImage key={item.title} img={item.img} title={item.title} path={item.path}/>
         ))}

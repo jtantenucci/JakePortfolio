@@ -18,17 +18,9 @@ export default function Info() {
   return (
     <>
       <HeadComponent></HeadComponent>
-      {columns ? <MiniMenu color="#000" /> : <Navigation />}
-      <Box
-        container
-        sx={{
-          maxWidth: columns ? "75vw" : "90vw",
-          marginLeft: "auto",
-          marginRight: "auto",
-          paddingTop: columns ? "50px" : "0px",
-        }}
-      >
-        <Typography fontFamily="TWKLausanne-300" fontSize={columns ? 75 : 40}>
+      { columns ? <MiniMenu color="#000" /> : <Navigation /> }
+      <Box container sx={{ maxWidth: columns ? "75vw" : "90vw", marginLeft: "auto", marginRight: "auto", paddingTop: columns ? "50px" : "0px" }}>
+        <Typography fontFamily="TWKLausanne-300" fontSize={ columns ? 75 : 40 }>
           A designer with experience in digital, motion and identity design. I
           find ways to work concept-driven visuals into valuable brand
           experiences and long-lasting connections. I am always open to new

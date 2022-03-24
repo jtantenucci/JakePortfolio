@@ -13,21 +13,6 @@ import Trail from "../effects/Trail";
 const Fade = React.forwardRef(function Fade(props, ref) {
   const theme = useTheme();
   const { in: open, children, onEnter, onExited, ...other } = props;
-  const style = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: open ? 1 : 0 },
-    onStart: () => {
-      if (open && onEnter) {
-        onEnter();
-      }
-    },
-    onRest: () => {
-      if (!open && onExited) {
-        onExited();
-      }
-    },
-  });
-
   const [styles, set] = useSpring(() => ({
     from: { opacity: 0 },
     to: { opacity: open ? 1 : 0 },
@@ -50,12 +35,7 @@ Fade.propTypes = {
   onExited: PropTypes.func,
 };
 
-export default function SpringMenu({
-  lab,
-  changedColor,
-  changedColor2,
-  changedColor3,
-}) {
+export default function SpringMenu({ lab }) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const preventDefault = (event) => event.preventDefault();
@@ -70,18 +50,13 @@ export default function SpringMenu({
 
   return (
     <div>
-      <IconButton
-        onClick={handleOpen}
-        aria-label="menu"
-      >
+      <IconButton onClick={handleOpen} aria-label="menu">
         <MenuIcon sx={{ color: lab ? "#fff" : "#000" }} />
       </IconButton>
-      <Dialog
-        fullScreen
+      <Dialog fullScreen
         PaperProps={{
           sx: { overflowX: "hidden", overflowY: "hidden", background: lab ? "#000" : "#fff" },
-          elevation: 0,
-
+          elevation: 0
         }}
         open={open}
         disableScrollLock={true}
@@ -100,13 +75,7 @@ export default function SpringMenu({
             background: lab ? "#000" : "#fff"
           }}
         >
-          <IconButton
-            edge="start"
-            color={ lab ? "secondary" : "primary" }
-            onClick={handleClose}
-            aria-label="close"
-            size="small"
-          >
+          <IconButton edge="start" color={ lab ? "secondary" : "primary" } onClick={handleClose} aria-label="close" size="small">
             <CloseIcon />
           </IconButton>
         </Box>
@@ -123,24 +92,24 @@ export default function SpringMenu({
           >
             <Trail open={open}>
               <AnimatedMenuItem
-                color={lab ? "#fff" : "#000"}
-                changedColor={changedColor}
+                color={ lab ? "#fff" : "#000" }
+                changedColor={ lab ? "#fff" : "#000" }
                 variant="h2"
                 height="7px"
                 href="/"
                 text="work"
               />
               <AnimatedMenuItem
-                color={lab ? "#fff" : "#000"}
-                changedColor={changedColor2 ? changedColor2 : changedColor}
+                color={ lab ? "#fff" : "#000" }
+                changedColor={ lab ? "#fff" : "#000" }
                 variant="h2"
                 height="7px"
                 href="/info"
                 text="info"
               />
               <AnimatedMenuItem
-                color={lab ? "#fff" : "#000"}
-                changedColor={changedColor3 ? changedColor3 : changedColor}
+                color={ lab ? "#fff" : "#000" }
+                changedColor={ lab ? "#fff" : "#000" }
                 variant="h2"
                 height="7px"
                 href="/lab"
