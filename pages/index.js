@@ -9,7 +9,7 @@ export default function Home() {
       <Head>
         <title>Jake LaMothe</title>
         <meta name="description" content="art direction/graphic design" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/Joy.ico" />
       </Head>
       <main>
           <div>
