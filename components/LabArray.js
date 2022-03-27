@@ -45,10 +45,8 @@ import Lab44 from "public/Lab44.png"
 import Lab45 from "public/Lab45.png"
 import Lab46 from "public/Lab46.png"
 import Lab47 from "public/Lab47.png"
-import Lab48 from "public/Lab48.png"
 import Lab49 from "public/Lab49.png"
 import Lab50 from "public/Lab50.jpeg"
-import Lab51 from "public/Lab51.png"
 import Lab52 from "public/Lab52.png"
 import Lab53 from "public/Lab53.jpeg"
 import Lab54 from "public/Lab54.png"
@@ -292,11 +290,6 @@ export const LabArray =
         title: 'Lab47',
     },
     {
-        id: 48,
-        img: Lab48,
-        title: 'Lab48',
-    },
-    {
         id: 49,
         img: Lab49,
         title: 'Lab49',
@@ -305,11 +298,6 @@ export const LabArray =
         id: 50,
         img: Lab50,
         title: 'Lab50',
-    },
-    {
-        id: 51,
-        img: Lab51,
-        title: 'Lab51'
     },
     {
         id: 52,

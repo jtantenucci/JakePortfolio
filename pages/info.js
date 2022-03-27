@@ -66,7 +66,7 @@ export default function Info() {
           fontFamily="TWKLausanne-300"
           height="3px"
         >
-          resume<FileDownloadIcon sx={{ paddingTop: "30px"}} fontSize="inherit"/>
+          Resume<FileDownloadIcon sx={{ paddingTop: columns ? "30px" : "15px"}} fontSize="inherit"/>
         </AnimatedDownload>
       </Box>
       <PageFooter color="#000" />
