@@ -1,5 +1,6 @@
 import React from "react";
 import { useTheme } from "@mui/material/styles";
+import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Box from '@mui/material/Box';
 import Image from "next/image";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -8,6 +9,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 export default function ImageBlock({path, title, maxWidth, height, marginRight, marginLeft, paddingTop, paddingBottom, placeholder, blurDataURL, priority}) {
   const theme = useTheme();
   const columns = useMediaQuery(theme.breakpoints.up("md"));
+  
   ImageBlock.defaultProps = {
     maxWidth: "100vw",
     height: "auto",
@@ -20,7 +22,7 @@ export default function ImageBlock({path, title, maxWidth, height, marginRight, 
     priority: false,
   }
 
-  return (      
+  return (
     <Box
       sx={{
         maxWidth: columns ? {maxWidth} : "100vw",
