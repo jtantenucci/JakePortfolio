@@ -15,6 +15,8 @@ import SpinCampaign from "public/SpinCampaign.jpg";
 import SpinInstagram from "public/SpinInstagram.jpg";
 import SpinLogo from "public/SpinLogo.gif";
 import HeadComponent from "components/HeadComponent";
+import PageVideo from "components/PageVideo";
+
 
 export default function SpinItForward() {
   const theme = useTheme();
@@ -80,7 +82,10 @@ export default function SpinItForward() {
           blurDataURL={spinBlur}
           title="Spin Instagram"
         />
-        <ImageBlock maxWidth="50vw" path={SpinLogo} title="Spin Logo Gif" />
+        <Box sx={{ margin: "auto", maxWidth: columns ? "75vw" : "100vw" }}>
+          <PageVideo src="/spin-video1.mp4" alt="spin-video"/>
+        </Box>
+        <ImageBlock maxWidth="30vw" path={SpinLogo} title="Spin Logo Gif" />
         <PageFooter color="#000" changedColor={"#ed0000"} />
       </Box>
     </>

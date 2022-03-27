@@ -20,7 +20,7 @@ export default function AnimatedMenuItem({
   AnimatedMenuItem.defaultProps = {
     changedWidth: "100%",
     changedColor: "#000",
-    height: "5px",
+    height: "3px",
     useMui: false,
   };
 

@@ -1,11 +1,9 @@
-import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import React from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import PageHeader from "components/PageHeader";
 import PageText from "components/PageText";
-import PageSubtext from "components/PageSubtext";
 import PageFooter from "components/PageFooter";
 import ImageBlock from "components/image/ImageBlock";
 import MiniMenu from "components/menu/MiniMenu";
@@ -18,6 +16,8 @@ import MintAlternates from "public/MintAlternates.jpg";
 import MintHeader from "public/MintHeader.jpg";
 import HeadComponent from "components/HeadComponent";
 import AnimatedMenuItem from "components/menu/AnimatedMenuItem";
+import MintGif from "public/MintGif.gif";
+import PageIframe from "components/PageIframe";
 
 export default function MadeIn502() {
   const theme = useTheme();
@@ -80,6 +80,7 @@ export default function MadeIn502() {
           blurDataURL={mintBlur}
           title="Mint Colors Spread"
         />
+        <ImageBlock maxWidth="35vw" path={MintGif} title="mintGif" />
         <Box
           sx={{
             display: "flex",

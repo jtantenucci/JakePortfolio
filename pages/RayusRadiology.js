@@ -15,6 +15,8 @@ import RayusPoster2 from "public/RayusPoster2.jpg";
 import RayusInstagram from "public/RayusInstagram.jpg";
 import RayusSocialTileGif from "public/RayusSocialTile.gif";
 import HeadComponent from "components/HeadComponent";
+import PageVideo from "components/PageVideo";
+
 
 export default function RayusRadiology() {
   const theme = useTheme();
@@ -76,7 +78,7 @@ export default function RayusRadiology() {
           />
         </Box>
         <ImageBlock
-          maxWidth="50vw"
+          maxWidth="35vw"
           path={RayusSocialTileGif}
           title="Rayus Social Tile Gif"
         />
@@ -84,8 +86,11 @@ export default function RayusRadiology() {
           path={RayusInstagram}
           placeholder="blur"
           blurDataURL={rayusBlur}
-          title="Rayus Social Tile Gif"
+          title="Rayus IG"
         />
+        <Box sx={{ margin: "auto", maxWidth: columns ? "75vw" : "100vw" }}>
+          <PageVideo src="/video-rayus.mp4" alt="rayus-video"/>
+        </Box>
       </Box>
       <PageFooter color="#000" />
     </>

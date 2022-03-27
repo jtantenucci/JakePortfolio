@@ -147,8 +147,8 @@ export default function Valkyrie() {
         title="Valkyrie Artboard 2"
       />
       <ImageBlock
-        marginLeft={0}
-        maxWidth="60vw"
+        marginLeft={80}
+        maxWidth="45vw"
         path={ValkyrieNasdaq}
         title="Valkyrie Artboard 2"
       />

@@ -1,6 +1,7 @@
 import "styles/globals.css";
 import PropTypes from "prop-types";
 import { ThemeProvider } from "@mui/material/styles";
+import { useTheme } from "@mui/material/styles";
 import { CacheProvider } from "@emotion/react";
 import createEmotionCache from "src/createEmotionCache";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -20,7 +21,7 @@ function MyApp(props) {
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
         <ScrollTop {...props}>
-          <Fab color="secondary" size="small" aria-label="scroll back to top">
+          <Fab sx={{ background: theme.palette.tertiary.main, color: theme.palette.secondary.main }} variant="extended" size="medium" aria-label="scroll back to top">
             <KeyboardArrowUpIcon />
           </Fab>
         </ScrollTop>
