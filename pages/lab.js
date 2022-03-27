@@ -1,3 +1,4 @@
+import Trail2 from "components/effects/Trail2";
 import React from "react";
 import ImageList from "@mui/material/ImageList";
 import { LabArray } from "components/LabArray";
@@ -16,6 +17,7 @@ export default function Lab() {
   const columns = useMediaQuery(theme.breakpoints.up("md"));
 
   return (
+    <Trail2>
     <Box sx={{ backgroundColor: 'primary.main' }}>
       <HeadComponent title="lab - Jake Lamothe" />
       { columns ? <MiniMenu color="#fff" changedColor="#fff"/> : <Navigation lab={true} /> }
@@ -47,5 +49,6 @@ export default function Lab() {
       </ImageList>
       <PageFooter color="#fff" changedColor="#fff"></PageFooter>
     </Box>
+    </Trail2>
   );
 }

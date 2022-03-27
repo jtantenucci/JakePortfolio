@@ -1,3 +1,4 @@
+import Trail2 from "components/effects/Trail2";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import React from "react";
@@ -26,6 +27,7 @@ export default function SpinItForward() {
 
   return (
     <>
+      <Trail2>
       <HeadComponent title="spin - Jake Lamothe" />
       {columns ? <MiniMenu color="#000" /> : <Navigation />}
       <Box
@@ -88,6 +90,7 @@ export default function SpinItForward() {
         <ImageBlock maxWidth="30vw" path={SpinLogo} title="Spin Logo Gif" />
         <PageFooter color="#000" changedColor={"#ed0000"} />
       </Box>
+      </Trail2>
     </>
   );
 }

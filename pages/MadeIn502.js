@@ -1,3 +1,4 @@
+import Trail2 from "components/effects/Trail2";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import React from "react";
@@ -27,6 +28,7 @@ export default function MadeIn502() {
 
   return (
     <>
+      <Trail2>
       <HeadComponent title="mint 502 - Jake Lamothe" />
       {columns ? null : <Navigation />}
       <Box sx={{ marginLeft: "auto", marginRight: "auto", maxWidth: "90vw" }}>
@@ -118,6 +120,7 @@ export default function MadeIn502() {
         title="Mint Header"
       />
       <PageFooter color="#000" />
+      </Trail2>
     </>
   );
 }

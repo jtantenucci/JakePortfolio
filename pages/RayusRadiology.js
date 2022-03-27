@@ -1,3 +1,4 @@
+import Trail2 from "components/effects/Trail2";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import React from "react";
@@ -26,6 +27,7 @@ export default function RayusRadiology() {
 
   return (
     <>
+      <Trail2>
       <HeadComponent title="rayus - Jake Lamothe" />
       {columns ? <MiniMenu color="#000" /> : <Navigation /> }
       <Box container sx={{ marginLeft: "auto", marginRight: "auto", maxWidth: "90vw" }}>
@@ -93,6 +95,7 @@ export default function RayusRadiology() {
         </Box>
       </Box>
       <PageFooter color="#000" />
+      </Trail2>
     </>
   );
 }

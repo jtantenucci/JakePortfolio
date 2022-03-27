@@ -1,18 +1,16 @@
 import React from "react";
-import Toolbar from "@mui/material/Toolbar";
+import Trail2 from "components/effects/Trail2";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Typography from "@mui/material/Typography";
 import MiniMenu from "components/menu/MiniMenu";
 import Navigation from "components/nav/Navigation";
-import Link from "@mui/material/Link";
 import PageFooter from "components/PageFooter";
 import HeadComponent from "components/HeadComponent";
 import AnimatedMenuItem from "components/menu/AnimatedMenuItem";
 import AnimatedDownload from "components/menu/AnimatedDownload";
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
-import ContactPageIcon from '@mui/icons-material/ContactPage';
 
 export default function Info() {
   const theme = useTheme();
@@ -26,7 +24,8 @@ export default function Info() {
 
   return (
     <>
-      <HeadComponent></HeadComponent>
+      <Trail2>
+      <HeadComponent title="info - Jake Lamothe" />      
       { columns ? <MiniMenu color="#000" /> : <Navigation /> }
       <Box container sx={{ maxWidth: columns ? "75vw" : "90vw", marginLeft: "auto", marginRight: "auto", paddingTop: columns ? "50px" : "0px" }}>
         <Typography fontFamily="TWKLausanne-300" fontSize={ columns ? 75 : 40 }>
@@ -70,6 +69,7 @@ export default function Info() {
         </AnimatedDownload>
       </Box>
       <PageFooter color="#000" />
+      </Trail2>
     </>
   );
 }

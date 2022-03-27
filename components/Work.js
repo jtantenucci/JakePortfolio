@@ -2,6 +2,7 @@ import React from "react";
 import ImageList from "@mui/material/ImageList";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import Trail2 from "components/effects/Trail2";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import MainHoverImage from "components/image/MainHoverImage";
@@ -17,7 +18,8 @@ export default function Work() {
 
   return (
     <>
-      { columns ? <MainMenu /> : <Navigation /> }
+    <Trail2>
+    { columns ? <MainMenu /> : <Navigation /> }
       <Box container sx={{ marginLeft: "auto", marginRight: "auto", width: "90vw", display: "flex", flexDirection: "column", justifyContent: "flex-start"}}>
         <Typography variant="h4" sx={{ justifySelf: "start" }}>
           selected work
@@ -32,6 +34,7 @@ export default function Work() {
         ))}
       </ImageList>
       <PageFooter color="#000"/>
+    </Trail2>
     </>
   );
 }

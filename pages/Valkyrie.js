@@ -1,4 +1,4 @@
-import Toolbar from "@mui/material/Toolbar";
+import Trail2 from "components/effects/Trail2";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import React from "react";
@@ -30,6 +30,7 @@ export default function Valkyrie() {
     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mMUMZ31HwADLAHkJ286/gAAAABJRU5ErkJggg==";
   return (
     <>
+    <Trail2>
       <HeadComponent title="valkyrie - Jake Lamothe" />
       { columns ? <MiniMenu color="#000"/> : <Navigation/> }
       <Box container sx={{ marginLeft: "auto", marginRight: "auto", maxWidth: "90vw" }}>
@@ -153,6 +154,7 @@ export default function Valkyrie() {
         title="Valkyrie Artboard 2"
       />
       <PageFooter color="#000" />
+      </Trail2>
     </>
   );
 }
