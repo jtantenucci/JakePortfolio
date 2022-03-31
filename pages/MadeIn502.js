@@ -18,7 +18,6 @@ import MintHeader from "public/MintHeader.jpg";
 import HeadComponent from "components/HeadComponent";
 import AnimatedMenuItem from "components/menu/AnimatedMenuItem";
 import MintGif from "public/MintGif.gif";
-import PageIframe from "components/PageIframe";
 
 export default function MadeIn502() {
   const theme = useTheme();
@@ -49,6 +48,7 @@ export default function MadeIn502() {
         />
         <Box sx={{ marginLeft: "auto", marginRight: "auto", paddingTop: columns ? "0px" : "1px", maxWidth: columns ? "50vw" : "100vw", paddingBottom: "50px" }}>
           <AnimatedMenuItem
+            id="mint-page-ig-link"
             color="rgba(0, 0, 0, 0.3)"
             changedColor="#87edaf"
             useMui="false"

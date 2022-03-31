@@ -7,6 +7,7 @@ import {Link as MuiLink} from '@mui/material';
 import Typography from "@mui/material/Typography";
 
 export default function AnimatedMenuItem({
+  id,
   changedWidth,
   height,
   color,
@@ -49,6 +50,7 @@ export default function AnimatedMenuItem({
         <MuiLink href={href}>
         <AnimatedLink
           sx={sx}
+          id={id}
           variant={variant}
           typography={{
             "&:hover": {
@@ -82,6 +84,7 @@ export default function AnimatedMenuItem({
       <div style={{ position: "relative", display: "inline-block" }}>
       <Link passHref href={href}>
         <AnimatedLink
+          id={id}
           sx={sx}
           variant={variant}
           typography={{

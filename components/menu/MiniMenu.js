@@ -18,8 +18,10 @@ export default function MiniMenu({ color, changedColor }) {
             marginRight: "0",
             justifyContent: "flex-end",
           }}
+          id="mini-menu"
         >
           <AnimatedMenuItem
+            id="work-page-minilink"
             href="/"
             text="work"
             variant="h3"
@@ -31,6 +33,7 @@ export default function MiniMenu({ color, changedColor }) {
             }}
           />
           <AnimatedMenuItem
+            id="info-page-minilink"
             href="/info"
             text="info"
             variant="h3"
@@ -42,6 +45,7 @@ export default function MiniMenu({ color, changedColor }) {
             }}
           />
           <AnimatedMenuItem
+            id="lab-page-minilink"
             href="/lab"
             text="lab"
             variant="h3"

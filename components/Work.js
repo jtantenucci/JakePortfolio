@@ -30,7 +30,7 @@ export default function Work() {
       </Box>
       <ImageList sx={{ marginLeft: "auto", marginRight: "auto", width: "90vw", overflow: "hidden", backgroundClip: "border-box" }} cols={columns ? 2 : 1} gap={25}>
         {MainArray.map((item) => (
-          <MainHoverImage key={item.title} img={item.img} title={item.title} path={item.path}/>
+          <MainHoverImage id={item.select} key={item.title} img={item.img} title={item.title} path={item.path}/>
         ))}
       </ImageList>
       <PageFooter color="#000"/>

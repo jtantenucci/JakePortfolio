@@ -42,6 +42,7 @@ export default function Info() {
           Currently working as an Art Director
         </Typography>
           <AnimatedMenuItem
+            id="ludwig-page-link"
             color="#000"
             useMui="false"
             sx={{ fontSize: columns ? 75 : 40 }}

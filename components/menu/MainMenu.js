@@ -21,8 +21,10 @@ export default function MainMenu() {
             display: "flex",
             paddingBottom: "100px",
           }}
+          id="main-menu"
         >
           <AnimatedMenuItem
+            id="work-page-link"
             href="/"
             text="work"
             color="#000"
@@ -30,6 +32,7 @@ export default function MainMenu() {
             height="10px"
           />
           <AnimatedMenuItem
+            id="info-page-link"
             href="/info"
             text="info"
             color="#000"
@@ -37,6 +40,7 @@ export default function MainMenu() {
             height="10px"
           />
           <AnimatedMenuItem
+            id="lab-page-link"
             href="/lab"
             text="lab"
             color="#000"

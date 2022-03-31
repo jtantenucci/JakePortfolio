@@ -52,7 +52,7 @@ export default function MainHoverImage({ ...props }) {
         }}
       >
         <Link passHref href={props.path}>
-          <a>
+          <a id={props.id}>
             <Image
               src={props.img}
               alt={props.title}

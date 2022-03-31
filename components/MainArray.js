@@ -10,7 +10,7 @@ export const MainArray =
         img: Mint502,
         title: 'Made In 502',
         path: '/MadeIn502',
-        author: 'Identity Design',
+        select: 'mint502-image',
         cols: 2,
     },
     {
@@ -18,7 +18,7 @@ export const MainArray =
         img: Valkyrie,
         title: 'Valkyrie',
         path: '/Valkyrie',
-        author: 'Identity Design',
+        select: 'valkyrie-image',
         cols: 2,
     },
     {
@@ -26,7 +26,7 @@ export const MainArray =
         img: Rayus,
         title: 'Rayus Radiology',
         path: '/RayusRadiology',
-        author: 'Art Direction',
+        select: 'rayus-image',
         cols: 2,
     },
     {
@@ -34,7 +34,7 @@ export const MainArray =
         img: Spin,
         title: 'Spin It Forward',
         path: '/SpinItForward',
-        author: 'Art Direction',
+        select: 'spin-image',
         cols: 2,
     },
 ];

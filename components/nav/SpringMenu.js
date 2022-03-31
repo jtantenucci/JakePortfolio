@@ -49,7 +49,7 @@ export default function SpringMenu({ lab }) {
   };
 
   return (
-    <div>
+    <div id="mobile-menu">
       <IconButton onClick={handleOpen} aria-label="menu">
         <MenuIcon sx={{ color: lab ? "#fff" : "#000" }} />
       </IconButton>
@@ -92,6 +92,7 @@ export default function SpringMenu({ lab }) {
           >
             <Trail open={open}>
               <AnimatedMenuItem
+                id="mobile-work-link"
                 color={ lab ? "#fff" : "#000" }
                 changedColor={ lab ? "#fff" : "#000" }
                 variant="h2"
@@ -100,6 +101,7 @@ export default function SpringMenu({ lab }) {
                 text="work"
               />
               <AnimatedMenuItem
+                id="mobile-info-link"
                 color={ lab ? "#fff" : "#000" }
                 changedColor={ lab ? "#fff" : "#000" }
                 variant="h2"
@@ -108,6 +110,7 @@ export default function SpringMenu({ lab }) {
                 text="info"
               />
               <AnimatedMenuItem
+                id="mobile-lab-link"
                 color={ lab ? "#fff" : "#000" }
                 changedColor={ lab ? "#fff" : "#000" }
                 variant="h2"
