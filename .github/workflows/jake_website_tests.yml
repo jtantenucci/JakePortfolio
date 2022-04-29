@@ -1,9 +1,5 @@
 name: Jake Website Tests
 
-on:
-  schedule:
-  workflow_dispatch:
-
 jobs:
   test:
     runs-on: ubuntu-latest
