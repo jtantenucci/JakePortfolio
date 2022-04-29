@@ -1,14 +1,14 @@
 name: Jake Website Tests
 
-on: 
+on:
+  schedule:
+    - cron: '0 10 * * *'
   workflow_dispatch:
     inputs:
       logLevel:
         description: 'Log level'     
         required: true
         default: 'warning'
-      tags:
-        description: 'Test scenario tags' 
 
 jobs:
   test:
@@ -24,7 +24,6 @@ jobs:
 
       - run: |
           echo "Log level: ${{ github.event.inputs.logLevel }}"
-          echo "Tags: ${{ github.event.inputs.tags }}" 
 
       - name: Build
         run: |
