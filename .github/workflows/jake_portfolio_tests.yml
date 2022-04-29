@@ -1,4 +1,4 @@
-name: Jake Website Tests
+name: Jake Portfolio Tests
 
 on:
   workflow_dispatch:
@@ -33,4 +33,4 @@ jobs:
           bundle exec rspec spec/features/smoke_tests/jakeportfolio/jake_portfolio_spec.rb
 
       - name: confirm name
-        run: echo "tests ${{ github.event.inputs.name }} complete"
+        run: echo "${{ github.event.inputs.name }} tests complete"
