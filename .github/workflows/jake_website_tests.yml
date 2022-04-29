@@ -24,7 +24,7 @@ jobs:
       - name: Build
         run: |
           gem install bundler
-          bundle install
+          BUNDLE_GEMFILE="JakePortfolio/Gemfile.ios" bundle install
 
       - name: Run tests
         run: |

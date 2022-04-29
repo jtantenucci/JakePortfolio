@@ -40,3 +40,5 @@ gem 'vcr'
 gem 'webmock'
 gem 'websocket-driver'
 gem 'yaml'
+
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
