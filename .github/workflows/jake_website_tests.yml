@@ -24,7 +24,6 @@ jobs:
       - name: Build
         run: |
           gem install bundler
-          gem update --system
           bundle install
 
       - name: Run tests
